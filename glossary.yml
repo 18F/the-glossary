@@ -1,0 +1,55 @@
+types:
+  -
+    key: acronym
+    desc: Shorthand term whose initials make a word, e.g. NASA (but not FBI).
+  -
+    key: initialism
+    desc: Shorthand term whose initials are pronounced individually, like FBI (but not NASA).
+  -
+    key: term
+    desc: A term that may be long or short form, but is not an acronym or intialism.
+
+entries:
+
+  POP:
+    type: initialism
+    term:
+      - Period of performance
+      - Procurement Operating Procedure
+
+  Period of performance:
+    type: term
+    description: null
+
+  Procurement Operating Procedure:
+    type: term
+    description: null
+
+  8(a):
+    type: term
+    longform: Section 8(a)
+    description: |
+       Also known as the 8(a) Business Development Program, Section 8(a) authorizes the Small  Business Administration (SBA) to enter into all types of contracts with other agencies and let  subcontracts for performing those contracts to firms eligible for program participation. The SBA’s  subcontractors are referred to as “8(a) contractors.”
+
+  FFP:
+    longform: Firm fixed-price contract
+    description: |
+      Provides for a price that is not subject to any adjustment on the basis of the contractor’s cost  experience in performing the contract, therefore it pays the contractor a fixed amount. This type  of contract is used for acquiring supplies or services when there are reasonably definite  functional or detailed specifications, and the contracting officer can establish a fair and  reasonable price at the time of contract award. This type of contract places upon the contractor  the maximum risk and full responsibility for all costs and resulting profit or loss. It provides the  maximum incentive for the contractor to control costs and perform effectively and imposes a  minimal administrative burden upon the contracting parties.
+    cross_references:
+
+  FIDO:
+    longform: Federal Interagency Databases Online
+    description: |
+      Fido.gov is an internet location for finding information related to federal interagency databases.
+    cross_references:
+
+  Fixed-price contract:
+    longform:
+    description: |
+      Provides for payment of a fixed amount.
+    cross_references:
+    - "Firm fixed-price contract"
+    - "Fixed-price contract with award fee"
+    - "Fixed-price contract with economic price adjustment"
+    - "Fixed-price contract with redetermination"
+    - "Fixed-price incentive-fee contract"
