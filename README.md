@@ -1,8 +1,14 @@
-# The Procurement Glossary
+# The Glossary
 
-The procurement glossary is a set of definitions for common abbreviations and jargon found in the procurement lifecycle.
+The glossary is a set of definitions for common abbreviations and jargon found at TTS.
 
-Definitions may not be expansive but should give users enough context to conduct further research and discovery. Although it typically focuses on procurement terms, some technical material may be included.
+**[Human-readable version](https://github.com/18F/the-glossary/blob/main/glossary.md)**
+
+[Machine-readable version](https://github.com/18F/the-glossary/blob/main/glossary.yml)
+
+This glossary is based on the archived [procurement glossary](https://github.com/18F/procurement-glossary), so as of early 2022 has mostly procurement-related terms.
+
+Definitions may not be expansive but should give readers enough context to conduct further research and discovery.
 
 ## Contributing a definition
 
