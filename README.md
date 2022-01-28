@@ -4,11 +4,28 @@ The procurement glossary is a set of definitions for common abbreviations and ja
 
 Definitions may not be expansive but should give users enough context to conduct further research and discovery. Although it typically focuses on procurement terms, some technical material may be included.
 
-## Contributing
+## Contributing a definition
 
-Open an issue to either [add an acronym]() or [add a term]().
+Open an issue to either add an acronym or add a term. (Templates pending.)
 
 Or, add the acronym / term to the glossary.yml file directly and open a pull request.
+
+## Contributing to the code
+
+Contributions are welcome!
+
+A few guidelines:
+
+- Prefer functional programming methods (pure functions, immutability, etc.).
+  - Use case statements as much as possible, making sure to cover all branches. Aggressively raise RuntimeErrors with clear messages if getting into impossible states.
+- Try to maintain data integrity guarantees. For example, once our validations run, we can be sure of the format and structure of the data. Let's keep that guarantee and create others.
+- Make very friendly error messages that lead those editing the glossary.yml to properly structure their data.
+
+Run tests with `rake test`.
+
+Run the glossary validation with `bin/validate`.
+
+Run the Markdown builder with `bin/build`.
 
 ## Validations
 
