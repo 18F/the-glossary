@@ -1827,7 +1827,9 @@ entries:
   Performance work statement:
     type: term
     description: |
-      A statement of work for performance-based acquisitions that describes the required results in clear, specific and objective terms with measurable outcomes
+      A statement of work for performance-based acquisitions that describes the required results in clear, specific and objective terms with measurable outcomes. Compare to [Statement of work](#statement-of-work).
+    cross_references:
+      - Statement of work
 
   QA:
     type: acronym
@@ -2086,7 +2088,9 @@ entries:
   Statement of work:
     type: term
     description: |
-      A document that captures and agrees the work activities, deliverables and timeline that a vendor will execute against in performance of work for a customer.
+      A document that captures and agrees the work activities, deliverables and timeline that a vendor will execute against in performance of work for a customer. Compare to [Performance work statement](#performance-work-statement).
+    cross_references:
+      - Performance work statement
 
   SPE:
     type: acronym
@@ -2094,6 +2098,8 @@ entries:
 
   Senior Procurement Executive:
     type: term
+  cross_references:
+    - Statement of work
     description: |
       The individual who is responsible for management direction of the acquisition system of the executive agency, including implementation of the unique acquisition policies, regulations, and standards of the executive agency.
 
