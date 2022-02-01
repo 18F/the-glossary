@@ -27,7 +27,7 @@ class Markdownify
     before_perform
     return "".tap do |str|
       str << "### Acronyms & Initialisms\n\n"
-      str << acronym_content.join(" | ")
+      str << acronym_content
       str << "\n\n"
       str << "### Terms & Definitions\n\n"
       str << definition_content.join("\n")
@@ -35,23 +35,46 @@ class Markdownify
   end
 
   def acronym_content
-    data[:acronyms].each_pair.map do |key, values|
-      tag = case Array(values[:term]).count
-      when 0 then
-        next
-      when 1 then
-        <<~TAG
-          <a name="acronym-#{key}"></a>[#{key}](#{goto values[:term]})
-        TAG
-      else
-        term_links = values[:term].map.with_index do |term, i|
-          "[(#{i + 1})](#{goto term})"
-        end.join(" ")
-        <<~TAG
-          <a name="acronym-#{key}"></a>#{key} #{term_links}
-        TAG
-      end.strip
+    results = Hash.new { |h, k| h[k] = [] }
+    data[:acronyms].each_pair do |key, values|
+      tag = tag_for_acronym(key, values)
+      next if tag.nil?
+      results[key.to_s.chars.first.upcase] << tag
     end
+    return "".tap do |str|
+      str << "| | |\n|-|-|\n" # table header
+      results.sort.map do |letter, tags|
+        str << "| " + letter + " | "
+        str << tags.join(" &bull; ") + " |"
+        str << "\n"
+      end
+    end
+  end
+
+  def tag_for_acronym(key, values)
+    case Array(values[:term]).count
+    when 0 then
+      nil
+    when 1 then
+      tag_for_single_term(key, values)
+    else
+      tag_for_multiple_terms(key, values)
+    end.strip
+  end
+
+  def tag_for_single_term(key, values)
+    <<~TAG
+      <a name="acronym-#{key}"></a>[#{key}](#{goto values[:term]})
+    TAG
+  end
+
+  def tag_for_multiple_terms(key, values)
+    term_links = values[:term].map.with_index do |term, i|
+      "[(#{i + 1})](#{goto term})"
+    end.join(" ")
+    <<~TAG
+      <a name="acronym-#{key}"></a>#{key} #{term_links}
+    TAG
   end
 
   def definition_content
