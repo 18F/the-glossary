@@ -1,6 +1,6 @@
 ---
 name: Add a new term
-about: Describe this issue template's purpose here.
+about: Add a term to the glossary
 title: Add a new term
 labels: ''
 assignees: ''
