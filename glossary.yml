@@ -96,6 +96,14 @@ entries:
     description: |
       The American Recovery and Reinvestment Act of 2009 (Pub L. 111-5), is an economic stimulus package enacted by the 111th United States Congress in February 2009. The Act was intended to provide a stimulus to the U.S. economy in the wake of the economic downturn. The measures are nominally worth $787 billion. The Act includes federal tax cuts, expansion of unemployment benefits and other social welfare provisions, and domestic spending in education, health care,  and infrastructure, including the energy sector. The Act also includes numerous non-economic recovery related items that were either part of longer-term plans (e.g. a study of the effectiveness of medical treatments) or desired by Congress (e.g. a limitation on executive compensation in federally aided banks). The ARRA is much larger than the Economic Stimulus Act of 2008, which consisted primarily of tax rebate checks.
 
+  ATO:
+    type: acronym
+    term: Authority to Operate
+
+  Authority to Operate:
+    type: term
+    description: null
+
   BAFO:
     type: acronym
     term: Best and final offer
@@ -103,7 +111,8 @@ entries:
   Best and final offer:
     type: term
     description: null
-    cross_references: Final proposal revision
+    cross_references:
+      - Final proposal revision
 
   Best value:
     type: term
@@ -125,7 +134,16 @@ entries:
   Blanket purchase agreement:
     type: term
     description: |
-      A simplified method of filling anticipated repetitive needs for supplies or services by establishing  "charge accounts" with qualified sources of supply.
+      A simplified acquisition method that government agencies use to fill anticipated repetitive needs for supplies or services. Essentially, BPAs are like "charge accounts" set up with trusted suppliers.
+
+  BPA:
+    type: acronym
+    term: Blanket Purchase Agreement
+
+  Blanket Purchase Agreement:
+    type: term
+    description:
+
 
   Bundling:
     type: term
@@ -634,6 +652,17 @@ entries:
     type: term
     description: null
 
+  E&I:
+    type: acronym
+    term: Experiment & Iterate
+
+  Experiment & Iterate:
+    type: term
+    description: |
+      That's when we build stuff and test it then build more stuff. Typically follows a Path Analysis (PA).
+    cross_references:
+      - Path Analysis
+
   EO:
     type: acronym
     term: Executive Order
@@ -659,6 +688,8 @@ entries:
     type: term
     description: |
       The Enterprise Acquisition Gateway for Leading-Edge Solutions contract is a multiple-award indefinite delivery/indefinite quantity (IDIQ) contract vehicle, specifically designed as the preferred source of information technology (IT) services for the majority of the Department of Homeland Security's (DHS) enterprise infrastructure and initiatives.
+    cross_references:
+      - Indefinite delivery indefinite quantity contract
 
   Economically disadvantaged:
     type: term
@@ -1012,6 +1043,14 @@ entries:
     description: |
       Property in the possession of, or directly acquired by, the Government and subsequently furnished to the contractor for performance of a contract. Government-furnished property includes, but is not limited to, spares and property furnished for repair, maintenance, overhaul, or modification. Government-furnished property also includes contractor-acquired property if the contractor-acquired property is a deliverable under a cost contract when accepted by the Government for continued use under the contract.
 
+  GOTS:
+    type: acronym
+    term: Government Off-The-Shelf system
+
+  Government Off-The-Shelf system:
+    type: term
+    description: null
+
   GPC:
     type: acronym
     term: Governmentwide commercial purchase card
@@ -1061,17 +1100,19 @@ entries:
     type: term
     description: |
       Indefinite delivery, indefinite quantity (IDIQ) contracts that are available for use by federal agencies worldwide. GSA awards and administers Multiple Award Schedule (MAS) contracts pursuant to 40 U.S.C. 501, Services for Executive Agencies. Under the MAS Program, GSA enters into government-wide contracts with commercial firms to provide over 11 million commercial supplies and services. GSA contracts are typically of this nature to promote competition, allow a choice among minor product differences and assure availability of the product in times of high demand. Agencies place orders directly with MAS contractors.  Interagency agreements are not required when placing orders against MAS contracts. The Economy Act does not apply when placing orders against MAS contracts.
+    cross_references:
+      - Indefinite delivery indefinite quantity contract
 
   GSA Multiple Award Schedule Contracts: *a
 
   GWAC:
     type: acronym
-    term: Governmentwide acquisition contract
+    term: Government-wide acquisition contract
 
-  Governmentwide acquisition contract:
+  Government-wide acquisition contract:
     type: term
     description: |
-      A Governmentwide acquisition contract is a convenient procurement contract instrument available to all Federal Government agencies that provides a broad range of equipment, support services and resources for research, development, and operational activities. The agencies using a GWAC to place orders for goods and services normally have to pay a fee for the convenience.
+      A Government-wide acquisition contract is a convenient procurement contract instrument available to all Federal Government agencies that provides a broad range of equipment, support services and resources for research, development, and operational activities. The agencies using a GWAC to place orders for goods and services normally have to pay a fee for the convenience.
 
   HCA:
     type: acronym
@@ -1280,6 +1321,14 @@ entries:
     description: |
       An estimating technique, life cycle cost is the total cost of ownership of machinery and equipment, including its cost of acquisition, operation, maintenance, conversion, and/or decommission.
 
+  LPTA:
+    type: acronym
+    term: Lowest price technically acceptable
+
+  Lowest price technically acceptable:
+    type: term
+    description: null
+
   MAC:
     type: acronym
     term: Multi-agency contract
@@ -1336,7 +1385,7 @@ entries:
   Multiple Award Schedule:
     type: term
     description: |
-      Contracts awarded by GSA or the Department of Veterans Affairs (VA) for similar or comparable supplies, or services, established with more than one supplier, at varying prices.
+      Long-term government-wide contracts with commercial firms, basically a list of places from which government can easily buy products or services. Also referred to as GSA Schedules or Federal Supply Schedules. Contracts awarded by GSA or the Department of Veterans Affairs (VA) for similar or comparable supplies, or services, established with more than one supplier, at varying prices.
 
   Maximum order:
     type: term
@@ -1482,7 +1531,8 @@ entries:
 
   Other direct cost:
     type: term
-    description: null
+    description: |
+      These are items like software licensing that are part of other contracts, but must be purchased in order to effectuate the full contract. For example, New Relic is a tool that to date has been an ODC of our contract with Aquilent.
 
   Offer:
     type: term
@@ -1574,6 +1624,17 @@ entries:
     type: term
     description: |
       An office within a Federal agency that oversees and monitors agency performance in compliance with the Federal Government policy to award a fair share of contracts to small businesses
+
+  PA:
+    type: acronym
+    term: Path Analysis
+
+  Path Analysis:
+    type: term
+    description: |
+      The foundational engagement where we figure out what we are doing with the agency, how we can best help them, and how can we set up future work for success. Often followed by an Experiment & Iterate (E&I) engagement.
+    cross_references:
+      - Experiment & Iterate
 
   PL:
     type: acronym
@@ -2056,6 +2117,15 @@ entries:
     type: term
     description: |
       A concern, including its affiliates, that is independently owned and operated, not dominant in the field of operation in which it is bidding on Government contracts, and qualified as a small business under the criteria and size standards in 13 CFR part 121 (see 19.102). Such a concern is "not dominant in its field of operation" when it does not exercise a controlling or major influence on a national basis in a kind of business activity in which a number of business concerns are primarily engaged. In determining whether dominance exists, consideration must be given to all appropriate factors, including volume of business, number of employees, financial resources,  competitive status or position, ownership or control of materials, processes, patents, license agreements, facilities, sales territory, and nature of business activity. See 15 U.S.C. 632.
+
+  SME:
+    type: acronym
+    term: Subject Matter Expert
+
+  Subject Matter Expert:
+    type: term
+    description: |
+      Someone who is knowledgeable about a particular subject matter (topic).
 
   Socially disadvantaged:
     type: term
