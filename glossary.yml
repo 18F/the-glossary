@@ -19,7 +19,7 @@ entries:
   Acquisition:
     type: term
     description: |
-      The acquiring by contract with appropriated funds of supplies or services (including construction)  by and for the use of the Federal Government through purchase or lease, whether the supplies or services are already in existence or must be created, developed, demonstrated, and evaluated.  Acquisition begins at the point when agency needs are established and includes the description of requirements to satisfy agency needs, solicitation and selection of sources, award of contracts,  contract financing, contract performance, contract administration, and those technical and management functions directly related to the process of fulfilling agency needs by contract.
+      The acquiring by contract with appropriated funds of supplies or services (including construction)  by and for the use of the Federal Government through purchase or lease, whether the supplies or services are already in existence or must be created, developed, demonstrated, and evaluated.  Acquisition begins at the point when agency needs are established and includes the description of requirements to satisfy agency needs, solicitation and selection of sources, award of contracts, contract financing, contract performance, contract administration, and those technical and management functions directly related to the process of fulfilling agency needs by contract.
 
   Acquisition plan:
     type: term
@@ -61,7 +61,7 @@ entries:
   Allocable:
     type: term
     description: |
-      A cost is properly allocable to a contract if it is incurred specifically for the contract or is incurred for another activity that also benefits the contract. With regard to the allocability of costs claimed,  the COR must look for any direct costs that appear to have no connection with the contract work.  If the COR cannot understand why the contractor would need billed materials or effort to perform the contract, then the costs may have been charged to the contract in error.
+      A cost is properly allocable to a contract if it is incurred specifically for the contract or is incurred for another activity that also benefits the contract. With regard to the allocability of costs claimed, the COR must look for any direct costs that appear to have no connection with the contract work.  If the COR cannot understand why the contractor would need billed materials or effort to perform the contract, then the costs may have been charged to the contract in error.
 
   Anti-Deficiency Act:
     type: term
@@ -94,7 +94,7 @@ entries:
     type: term
     longform: American Recovery and Reinvestment Act of 2009
     description: |
-      The American Recovery and Reinvestment Act of 2009 (Pub L. 111-5), is an economic stimulus package enacted by the 111th United States Congress in February 2009. The Act was intended to provide a stimulus to the U.S. economy in the wake of the economic downturn. The measures are nominally worth $787 billion. The Act includes federal tax cuts, expansion of unemployment benefits and other social welfare provisions, and domestic spending in education, health care,  and infrastructure, including the energy sector. The Act also includes numerous non-economic recovery related items that were either part of longer-term plans (e.g. a study of the effectiveness of medical treatments) or desired by Congress (e.g. a limitation on executive compensation in federally aided banks). The ARRA is much larger than the Economic Stimulus Act of 2008, which consisted primarily of tax rebate checks.
+      The American Recovery and Reinvestment Act of 2009 (Pub L. 111-5), is an economic stimulus package enacted by the 111th United States Congress in February 2009. The Act was intended to provide a stimulus to the U.S. economy in the wake of the economic downturn. The measures are nominally worth $787 billion. The Act includes federal tax cuts, expansion of unemployment benefits and other social welfare provisions, and domestic spending in education, health care, and infrastructure, including the energy sector. The Act also includes numerous non-economic recovery related items that were either part of longer-term plans (e.g. a study of the effectiveness of medical treatments) or desired by Congress (e.g. a limitation on executive compensation in federally aided banks). The ARRA is much larger than the Economic Stimulus Act of 2008, which consisted primarily of tax rebate checks.
 
   ATO:
     type: acronym
@@ -102,7 +102,8 @@ entries:
 
   Authority to Operate:
     type: term
-    description: null
+    description: |
+      An ATO is an authorization approved by an Authorizing Official (AO) who accepts a system’s security risk. We say “ATO process” as shorthand. The process generally includes a series of steps to categorize, prepare, implement, assess, authorize, and monitor a system to ensure it meets an acceptable level of security – and that the system complies with the many laws and regulations applicable to federal information technology.
 
   BAFO:
     type: acronym
@@ -144,7 +145,6 @@ entries:
     type: term
     description:
 
-
   Bundling:
     type: term
     description: |
@@ -153,7 +153,7 @@ entries:
   Buy American Act:
     type: term
     description: |
-      The Buy American Act requires that only domestic end products be acquired for public use,  except for articles, materials, and supplies under certain circumstances.
+      The Buy American Act requires that only domestic end products be acquired for public use, except for articles, materials, and supplies under certain circumstances.
 
   CAGE:
     type: acronym
@@ -182,7 +182,7 @@ entries:
   Civilian Board of Contract Appeals:
     type: term
     description: |
-      The CBCA was established by section 847 of the National Defense Authorization Act for Fiscal Year 2006 to hear and decide contract disputes between government contractors and executive agencies under the provisions of the Contract Disputes Act of 1978, 41 U.S.C. §§ 601-613, and regulations and rules issued under that statute. The Board's authority extends to all agencies other than the Department of Defense, the Department of the Army, the Department of the Navy,  the Department of the Air Force, the National Aeronautics and Space Administration, the United States Postal Service, the Postal Rate Commission, and the Tennessee Valley Authority.
+      The CBCA was established by section 847 of the National Defense Authorization Act for Fiscal Year 2006 to hear and decide contract disputes between government contractors and executive agencies under the provisions of the Contract Disputes Act of 1978, 41 U.S.C. §§ 601-613, and regulations and rules issued under that statute. The Board's authority extends to all agencies other than the Department of Defense, the Department of the Army, the Department of the Navy, the Department of the Air Force, the National Aeronautics and Space Administration, the United States Postal Service, the Postal Rate Commission, and the Tennessee Valley Authority.
 
   CBP:
     type: acronym
@@ -191,7 +191,7 @@ entries:
   U.S. Customs and Border Protection:
     type: term
     description: |
-      CBP is one of the Department of Homeland Security's largest and most complex components,  with a priority mission of keeping terrorists and their weapons out of the U.S. It also has a responsibility for securing and facilitating trade and travel while enforcing hundreds of U.S.  regulations, including immigration and drug laws.
+      CBP is one of the Department of Homeland Security's largest and most complex components, with a priority mission of keeping terrorists and their weapons out of the U.S. It also has a responsibility for securing and facilitating trade and travel while enforcing hundreds of U.S.  regulations, including immigration and drug laws.
 
   CCF:
     type: acronym
@@ -230,7 +230,7 @@ entries:
   Certified cost or pricing data:
     type: term
     description: |
-      Includes all facts that, as of the date of price agreement that prudent buyers and sellers would reasonably affect price negotiations significantly. Cost or pricing data are factual, not judgmental,  and include facts forming the basis for future cost projections, contributing to soundness of estimates, and contributing to the validity of costs already incurred.
+      Includes all facts that, as of the date of price agreement that prudent buyers and sellers would reasonably affect price negotiations significantly. Cost or pricing data are factual, not judgmental, and include facts forming the basis for future cost projections, contributing to soundness of estimates, and contributing to the validity of costs already incurred.
 
   CFO:
     type: acronym
@@ -269,7 +269,7 @@ entries:
   Commercial item:
     type: term
     description: |
-      Any item, other than real property, that is of a type customarily used by the general public or by non-governmental entities for purposes other than governmental purposes, and has been sold,  leased, or licensed to the general public; or has been offered for sale, lease, or license to the general public.
+      Any item, other than real property, that is of a type customarily used by the general public or by non-governmental entities for purposes other than governmental purposes, and has been sold, leased, or licensed to the general public; or has been offered for sale, lease, or license to the general public.
 
   CICA:
     type: acronym
@@ -291,7 +291,7 @@ entries:
   Claim:
     type: term
     description: |
-      A written demand or written assertion by one of the contracting parties seeking, as a matter of right, the payment of money in a sum certain, the adjustment or interpretation of contract terms,  or other relief arising under or relating to the contract.
+      A written demand or written assertion by one of the contracting parties seeking, as a matter of right, the payment of money in a sum certain, the adjustment or interpretation of contract terms, or other relief arising under or relating to the contract.
 
   Clause:
     type: term
@@ -370,7 +370,7 @@ entries:
   Certificate of Competency:
     type: term
     description: |
-      The certificate issued by the Small Business Administration (SBA) stating that the holder is responsible (with respect to all elements of responsibility, including, but not limited to, capability,  competency, capacity, credit, integrity, perseverance, tenacity, and limitations on subcontracting)  for the purpose of receiving and performing a specific Government contract.
+      The certificate issued by the Small Business Administration (SBA) stating that the holder is responsible (with respect to all elements of responsibility, including, but not limited to, capability, competency, capacity, credit, integrity, perseverance, tenacity, and limitations on subcontracting)  for the purpose of receiving and performing a specific Government contract.
 
   COI:
     type: acronym
@@ -437,7 +437,7 @@ entries:
   Cost realism:
     type: term
     description: |
-      Involves an independent review of each cost element to determine if that element is realistic,  reflects the contract requirements, and is consistent with the contractor's proposal.
+      Involves an independent review of each cost element to determine if that element is realistic, reflects the contract requirements, and is consistent with the contractor's proposal.
 
   Cost realism analysis:
     type: term
@@ -508,7 +508,7 @@ entries:
   Contractor Performance Assessment Reporting System:
     type: term
     description: |
-      'CPARS is a web-enabled application that collects and manages the library of automated CPARs in order to assess a contractor''s performance and provide a record, both positive and negative,  on a given contractor during a specific period of time. CPARS is for UNCLASSIFIED use only.  Each assessment is based on objective facts and supported by program and contract management data, such as cost performance reports, customer comments, quality reviews,  technical interchange meetings, financial solvency assessments, construction/production management reviews, contractor operations reviews, functional performance evaluations, and earned contract incentives.'
+      'CPARS is a web-enabled application that collects and manages the library of automated CPARs in order to assess a contractor''s performance and provide a record, both positive and negative, on a given contractor during a specific period of time. CPARS is for UNCLASSIFIED use only.  Each assessment is based on objective facts and supported by program and contract management data, such as cost performance reports, customer comments, quality reviews, technical interchange meetings, financial solvency assessments, construction/production management reviews, contractor operations reviews, functional performance evaluations, and earned contract incentives.'
 
   CPFF:
     type: acronym
@@ -517,7 +517,7 @@ entries:
   Cost-plus-fixed-fee contract:
     type: term
     description: |
-      A cost-reimbursement contract that provides for payment to the contractor of a negotiated fee that is fixed at the inception of the contract. The fixed fee does not vary with actual cost, but may be adjusted as a result of changes in the work to be performed under the contract. This contract type permits contracting for efforts that might otherwise present too great a risk to contractors,  but it provides the contractor only a minimum incentive to control costs.
+      A cost-reimbursement contract that provides for payment to the contractor of a negotiated fee that is fixed at the inception of the contract. The fixed fee does not vary with actual cost, but may be adjusted as a result of changes in the work to be performed under the contract. This contract type permits contracting for efforts that might otherwise present too great a risk to contractors, but it provides the contractor only a minimum incentive to control costs.
 
   CPIF:
     type: acronym
@@ -599,7 +599,7 @@ entries:
   Determinations:
     type: term
     description: |
-      There are various types of determinations. For example, there are determinations associated with commercial items (commerciality determination), Government property (whether to furnish it and what type to furnish), and the type of services to be acquired (advisory and assistance,  personal versus non-personal).
+      There are various types of determinations. For example, there are determinations associated with commercial items (commerciality determination), Government property (whether to furnish it and what type to furnish), and the type of services to be acquired (advisory and assistance, personal versus non-personal).
 
   DHS:
     type: acronym
@@ -608,7 +608,7 @@ entries:
   Department of Homeland Security:
     type: term
     description: |
-      The United States Department of Homeland Security has the primary responsibilities of protecting the territory of the U.S. from terrorist attacks and responding to natural disasters.  Whereas the Department of Defense is charged with military actions abroad, the Department of Homeland Security works in the civilian sphere to protect the United States within, at, and outside its borders. Its stated goal is to prepare for, prevent, and respond to domestic emergencies,  particularly terrorism.
+      The United States Department of Homeland Security has the primary responsibilities of protecting the territory of the U.S. from terrorist attacks and responding to natural disasters.  Whereas the Department of Defense is charged with military actions abroad, the Department of Homeland Security works in the civilian sphere to protect the United States within, at, and outside its borders. Its stated goal is to prepare for, prevent, and respond to domestic emergencies, particularly terrorism.
 
   DoD:
     type: acronym
@@ -617,7 +617,7 @@ entries:
   Department of Defense:
     type: term
     description: |
-      The United States Department of Defense is the Federal department charged with coordinating and supervising all agencies and functions of the Government relating directly to national security and the military. The organization and functions of the DOD are set forth in Title 10 of the United States Code. The DOD is the major tenant of The Pentagon building near Washington, D.C., and has three major components – the Department of the Army, the Department of the Navy, and the Department of the Air Force. Among the many DOD agencies are the Missile Defense Agency,  the Defense Advanced Research Projects Agency (DARPA), the Pentagon Force Protection Agency (PFPA), the Defense Intelligence Agency (DIA), the National Geospatial-Intelligence Agency (NGA), and the National Security Agency (NSA). The department also operates several joint service schools, including the National War College.
+      The United States Department of Defense is the Federal department charged with coordinating and supervising all agencies and functions of the Government relating directly to national security and the military. The organization and functions of the DOD are set forth in Title 10 of the United States Code. The DOD is the major tenant of The Pentagon building near Washington, D.C., and has three major components – the Department of the Army, the Department of the Navy, and the Department of the Air Force. Among the many DOD agencies are the Missile Defense Agency, the Defense Advanced Research Projects Agency (DARPA), the Pentagon Force Protection Agency (PFPA), the Defense Intelligence Agency (DIA), the National Geospatial-Intelligence Agency (NGA), and the National Security Agency (NSA). The department also operates several joint service schools, including the National War College.
 
   DSBS:
     type: acronym
@@ -747,7 +747,7 @@ entries:
   Earned value management:
     type: term
     description: |
-      A project management technique for measuring project progress in an objective manner. EVM has the ability to combine measurements of scope, schedule, and cost in a single integrated system. When properly applied, EVM provides an early warning of performance problems.  Additionally, EVM promises to improve the definition of project scope, prevent scope creep,  communicate objective progress to stakeholders, and keep the project team focused on achieving progress.
+      A project management technique for measuring project progress in an objective manner. EVM has the ability to combine measurements of scope, schedule, and cost in a single integrated system. When properly applied, EVM provides an early warning of performance problems.  Additionally, EVM promises to improve the definition of project scope, prevent scope creep, communicate objective progress to stakeholders, and keep the project team focused on achieving progress.
 
   F&O:
     type: acronym
@@ -1076,7 +1076,7 @@ entries:
   Government Printing Office:
     type: term
     description: |
-      The U.S. Government Printing Office is an agency of the legislative branch of the United States Federal Government. The office prints and provides access to documents produced by and for all three branches of the Federal Government, including the Supreme Court, the Congress,  Executive Office of the President, executive departments, and independent agencies. The primary mission of GPO is to make government publications widely available, by gathering,  cataloging, providing, and preserving published information in all forms. GPO provides information to the public through GPO Access, which contains searchable databases of government information, and through the Federal Depository Library Program, which is a partnership with hundreds of libraries throughout the country.
+      The U.S. Government Printing Office is an agency of the legislative branch of the United States Federal Government. The office prints and provides access to documents produced by and for all three branches of the Federal Government, including the Supreme Court, the Congress, Executive Office of the President, executive departments, and independent agencies. The primary mission of GPO is to make government publications widely available, by gathering, cataloging, providing, and preserving published information in all forms. GPO provides information to the public through GPO Access, which contains searchable databases of government information, and through the Federal Depository Library Program, which is a partnership with hundreds of libraries throughout the country.
 
   GPRA:
     type: acronym
@@ -1094,7 +1094,7 @@ entries:
   General Services Administration:
     type: term
     description: |
-      The General Services Administration is an independent agency of the United States government,  established in 1949 to help manage and support the basic functioning of federal agencies. The GSA supplies products and communications for U.S. government offices, provides transportation and office space to federal employees, and develops government-wide cost-minimizing policies,  among other management tasks. Its stated mission is to help federal agencies better serve the public by offering, at best value, superior workplaces, expert solutions, acquisition services and management policies.
+      The General Services Administration is an independent agency of the United States government, established in 1949 to help manage and support the basic functioning of federal agencies. The GSA supplies products and communications for U.S. government offices, provides transportation and office space to federal employees, and develops government-wide cost-minimizing policies, among other management tasks. Its stated mission is to help federal agencies better serve the public by offering, at best value, superior workplaces, expert solutions, acquisition services and management policies.
 
   GSA Schedule and Federal Supply Schedule contracts: &a
     type: term
@@ -1121,7 +1121,7 @@ entries:
   Head of contracting activity:
     type: term
     description: |
-      The official who has overall responsibility for managing the contracting activity. This is normally a high level position that has broad powers to establish agency policy, appoint Contracting Officers,  and make approvals and determinations above the contracting office level.
+      The official who has overall responsibility for managing the contracting activity. This is normally a high level position that has broad powers to establish agency policy, appoint Contracting Officers, and make approvals and determinations above the contracting office level.
 
   Historical data:
     type: term
@@ -1164,7 +1164,7 @@ entries:
   U.S. Immigration and Customs Enforcement:
     type: term
     description: |
-      'A federal law enforcement agency under the United States Department of Homeland Security, responsible for identifying, investigating, and dismantling vulnerabilities regarding the nation''s border, economic, transportation, and infrastructure security. Headquartered in Washington, D.C.,  ICE is charged with the investigation and enforcement of over 400 federal statutes within the United States, and maintains attaches at major U.S. embassies overseas. Consequently, ICE special agents possess the broadest investigative authority within the United States government.'
+      'A federal law enforcement agency under the United States Department of Homeland Security, responsible for identifying, investigating, and dismantling vulnerabilities regarding the nation''s border, economic, transportation, and infrastructure security. Headquartered in Washington, D.C., ICE is charged with the investigation and enforcement of over 400 federal statutes within the United States, and maintains attaches at major U.S. embassies overseas. Consequently, ICE special agents possess the broadest investigative authority within the United States government.'
 
   IDIQ:
     type: acronym
@@ -1182,7 +1182,7 @@ entries:
   Invitation for bid:
     type: term
     description: |
-      Used for sealed bidding, the IFB does not contain evaluation criteria. The offeror submits only a price as their proposal and the Government must select the lowest price if the price is considered fair and reasonable and the offeror meets responsibility qualifications. An invitation for bid is an invitation to contractors or equipment suppliers, through a bidding process, to submit a proposal on a specific project to be realized or product or service to be furnished. If not stated otherwise,  the contractor or supplier with the lowest bid is awarded the contract, provided that they meet the minimum criteria for the bid. This is in contrast to a request for proposal (RFP), in which case other reasons (technology used, quality, past performance) might cause or allow choice of another offer.
+      Used for sealed bidding, the IFB does not contain evaluation criteria. The offeror submits only a price as their proposal and the Government must select the lowest price if the price is considered fair and reasonable and the offeror meets responsibility qualifications. An invitation for bid is an invitation to contractors or equipment suppliers, through a bidding process, to submit a proposal on a specific project to be realized or product or service to be furnished. If not stated otherwise, the contractor or supplier with the lowest bid is awarded the contract, provided that they meet the minimum criteria for the bid. This is in contrast to a request for proposal (RFP), in which case other reasons (technology used, quality, past performance) might cause or allow choice of another offer.
 
   IGCE:
     type: acronym
@@ -1191,7 +1191,7 @@ entries:
   Independent Government cost estimate:
     type: term
     description: |
-      'The IGCE presents an analysis of a contractor's reasonable and required resources to perform or deliver product on a Federal contact. The IGCE is the projected, anticipated, or probable cost or price of a proposed Federal acquisition or procurement. It serves as a benchmark for establishing price analysis and cost realism. The IGCE is the Government''s estimate of the resources and projected cost of the resources a contractor will incur in the performance of a contract. These costs include direct costs; such as labor, supplies, equipment, or transportation and indirect costs; such as labor overhead, material overhead, as well as general and administrative (G&A)  expenses, profit or fee. As specified in the FAR Part 10, an IGCE is based on market research.  Market research is used to develop the IGCE through canvassing commercial entities with the capabilities to meet a stated requirement. Market research is the basis for evaluation of current prices for the same, or a similar requirement, to be performed under the same conditions. The IGCE may be determined through: GSA schedule prices, catalog prices, market survey,  published price lists, historical prices, and detailed analysis.'
+      'The IGCE presents an analysis of a contractor's reasonable and required resources to perform or deliver product on a Federal contact. The IGCE is the projected, anticipated, or probable cost or price of a proposed Federal acquisition or procurement. It serves as a benchmark for establishing price analysis and cost realism. The IGCE is the Government''s estimate of the resources and projected cost of the resources a contractor will incur in the performance of a contract. These costs include direct costs; such as labor, supplies, equipment, or transportation and indirect costs; such as labor overhead, material overhead, as well as general and administrative (G&A)  expenses, profit or fee. As specified in the FAR Part 10, an IGCE is based on market research.  Market research is used to develop the IGCE through canvassing commercial entities with the capabilities to meet a stated requirement. Market research is the basis for evaluation of current prices for the same, or a similar requirement, to be performed under the same conditions. The IGCE may be determined through: GSA schedule prices, catalog prices, market survey, published price lists, historical prices, and detailed analysis.'
 
   IGE:
     type: acronym
@@ -1219,7 +1219,7 @@ entries:
   Indian tribe:
     type: term
     description: |
-      Any Indian tribe, band, nation, or other organized group or community of Indians, including any Alaska Native Corporation as defined in 13 CFR 124.100 which is recognized as eligible for the special programs and services provided by the U.S. to Indians because of their status as Indians,  or which is recognized as such by the State in which such tribe, band, nation, group, or community resides.
+      Any Indian tribe, band, nation, or other organized group or community of Indians, including any Alaska Native Corporation as defined in 13 CFR 124.100 which is recognized as eligible for the special programs and services provided by the U.S. to Indians because of their status as Indians, or which is recognized as such by the State in which such tribe, band, nation, group, or community resides.
 
   Industry:
     type: term
@@ -1259,7 +1259,7 @@ entries:
   Information technology:
     type: term
     description: |
-      Any equipment, or interconnected system(s) or subsystem(s) of equipment, that is used in the automatic acquisition, storage, analysis, evaluation, manipulation, management, movement,  control, display, switching, interchange, transmission, or reception of data or information by the agency.
+      Any equipment, or interconnected system(s) or subsystem(s) of equipment, that is used in the automatic acquisition, storage, analysis, evaluation, manipulation, management, movement, control, display, switching, interchange, transmission, or reception of data or information by the agency.
 
   J&A:
     type: acronym
@@ -1366,7 +1366,7 @@ entries:
   Market-based pricing:
     type: term
     description: |
-      Market-based pricing strategies include: Profit maximization, Market share, Market skimming,  Current revenue, Promotional, Demand differential, and Market competition
+      Market-based pricing strategies include: Profit maximization, Market share, Market skimming, Current revenue, Promotional, Demand differential, and Market competition
 
   Market-share pricing:
     type: term
@@ -1432,7 +1432,7 @@ entries:
   Micro-purchase threshold:
     type: term
     description: |
-      $3,000 in general, with these exceptions: for acquisitions of construction subject to the Davis- Bacon Act, the threshold is $2,000 per transaction; for acquisitions of services subject to the Service Contract Act, the threshold is $2,500 per transaction; and for acquisitions of supplies or services that, as determined by the head of the Agency, are to be used to support a contingency operation or to facilitate defense against or recovery from nuclear, biological, chemical, or radiological attack, as described in FAR 13.201(g)(1), except for construction subject to the Davis- Bacon Act (41 U.S.C. 428a): (1) $15,000 in the case of any contract to be awarded and performed, or purchase to be made,  inside the United States; and (2) $30,000 in the case of any contract to be awarded and performed, or purchase to be made,  outside the United States.
+      $3,000 in general, with these exceptions: for acquisitions of construction subject to the Davis- Bacon Act, the threshold is $2,000 per transaction; for acquisitions of services subject to the Service Contract Act, the threshold is $2,500 per transaction; and for acquisitions of supplies or services that, as determined by the head of the Agency, are to be used to support a contingency operation or to facilitate defense against or recovery from nuclear, biological, chemical, or radiological attack, as described in FAR 13.201(g)(1), except for construction subject to the Davis- Bacon Act (41 U.S.C. 428a): (1) $15,000 in the case of any contract to be awarded and performed, or purchase to be made, inside the United States; and (2) $30,000 in the case of any contract to be awarded and performed, or purchase to be made, outside the United States.
 
   MRC:
     type: acronym
@@ -1537,7 +1537,7 @@ entries:
   Offer:
     type: term
     description: |
-      A response to a solicitation that, if accepted, would bind the offeror to perform the resultant contract. Responses to invitations for bids (sealed bidding) are offers called "bids" or "sealed bids"; responses to requests for proposals (negotiation) are offers called "proposals"; however,  responses to requests for quotations (simplified acquisition) are "quotations," not offers. For unsolicited proposals. See FAR Subpart 15.6.
+      A response to a solicitation that, if accepted, would bind the offeror to perform the resultant contract. Responses to invitations for bids (sealed bidding) are offers called "bids" or "sealed bids"; responses to requests for proposals (negotiation) are offers called "proposals"; however, responses to requests for quotations (simplified acquisition) are "quotations," not offers. For unsolicited proposals. See FAR Subpart 15.6.
 
   Offeror:
     type: term
@@ -1584,7 +1584,7 @@ entries:
   Office of Management and Budget:
     type: term
     description: |
-      'OMB''s predominant mission is to assist the President in overseeing the preparation of the Federal budget and to supervise its administration in Executive Branch agencies. In helping to formulate the President''s spending plans, OMB evaluates the effectiveness of agency programs,  policies, and procedures, assesses competing funding demands among agencies, and sets funding priorities. OMB ensures that agency reports, rules, testimony, and proposed legislation are consistent with the President''s Budget and with Administration policies. In addition, OMB oversees and coordinates the Administration''s procurement, financial management, information,  and regulatory policies. In each of these areas, OMB''s role is to help improve administrative management, to develop better performance measures and coordinating mechanisms, and to reduce any unnecessary burdens on the public.'
+      'OMB''s predominant mission is to assist the President in overseeing the preparation of the Federal budget and to supervise its administration in Executive Branch agencies. In helping to formulate the President''s spending plans, OMB evaluates the effectiveness of agency programs, policies, and procedures, assesses competing funding demands among agencies, and sets funding priorities. OMB ensures that agency reports, rules, testimony, and proposed legislation are consistent with the President''s Budget and with Administration policies. In addition, OMB oversees and coordinates the Administration''s procurement, financial management, information, and regulatory policies. In each of these areas, OMB''s role is to help improve administrative management, to develop better performance measures and coordinating mechanisms, and to reduce any unnecessary burdens on the public.'
 
   OPO:
     type: acronym
@@ -1982,7 +1982,7 @@ entries:
   Request for quotation:
     type: term
     description: |
-      RFQs are used by the ordering activity to schedule contractors that offer services that will meet the agency's needs. RFQs include a Statement of Work (SOW) including (1) work to be performed; (2) Location of work; (3) Period of performance; (4) Deliverable schedule; (5)  Applicable performance standards; and (6) any special requirements, such as, security clearances, travel, special knowledge. RFQs also include evaluation criteria - factors and significant subfactors that will be used to evaluate the proposal and their relative importance,  such as technical compliance, experience, and past performance. [FAR 8.405-2(c) Request for Quotation procedures] See RFP also.
+      RFQs are used by the ordering activity to schedule contractors that offer services that will meet the agency's needs. RFQs include a Statement of Work (SOW) including (1) work to be performed; (2) Location of work; (3) Period of performance; (4) Deliverable schedule; (5)  Applicable performance standards; and (6) any special requirements, such as, security clearances, travel, special knowledge. RFQs also include evaluation criteria - factors and significant subfactors that will be used to evaluate the proposal and their relative importance, such as technical compliance, experience, and past performance. [FAR 8.405-2(c) Request for Quotation procedures] See RFP also.
 
   SAM:
     type: acronym
@@ -1991,7 +1991,7 @@ entries:
   System for Award Management:
     type: term
     description: |
-      A consolidated procurement system that will combine eight legacy Federal Procurement Systems and the Catalog of Federal Domestic Assistance (CFDA). SAM will be developed in stages,  starting with Entity Management (CCR/FedReg and ORCA) and the exclusions portion of Performance Information (EPLS). SAM is expected to launch in winter 2012.
+      A consolidated procurement system that will combine eight legacy Federal Procurement Systems and the Catalog of Federal Domestic Assistance (CFDA). SAM will be developed in stages, starting with Entity Management (CCR/FedReg and ORCA) and the exclusions portion of Performance Information (EPLS). SAM is expected to launch in winter 2012.
 
   SAP:
     type: acronym
@@ -2000,7 +2000,7 @@ entries:
   Simplified acquisition procedures:
     type: term
     description: |
-      Acquisition procedures for requirements above the micro-purchase threshold of $3,000 and under $100,000 described in FAR Part 13 designed to (a) reduce administrative costs; (b)  improve opportunities for small, small disadvantaged, women-owned, veteran-owned, HUBZone,  and service-disabled veteran-owned small business concerns to obtain a fair proportion of Government contracts; (c) promote efficiency and economy in contracting; and (d) avoid unnecessary burdens for agencies and contractors. SAP procedures are permitted for commercial items up to $550,000.
+      Acquisition procedures for requirements above the micro-purchase threshold of $3,000 and under $100,000 described in FAR Part 13 designed to (a) reduce administrative costs; (b)  improve opportunities for small, small disadvantaged, women-owned, veteran-owned, HUBZone, and service-disabled veteran-owned small business concerns to obtain a fair proportion of Government contracts; (c) promote efficiency and economy in contracting; and (d) avoid unnecessary burdens for agencies and contractors. SAP procedures are permitted for commercial items up to $550,000.
 
   SAT:
     type: acronym
@@ -2116,7 +2116,7 @@ entries:
   Small business concern:
     type: term
     description: |
-      A concern, including its affiliates, that is independently owned and operated, not dominant in the field of operation in which it is bidding on Government contracts, and qualified as a small business under the criteria and size standards in 13 CFR part 121 (see 19.102). Such a concern is "not dominant in its field of operation" when it does not exercise a controlling or major influence on a national basis in a kind of business activity in which a number of business concerns are primarily engaged. In determining whether dominance exists, consideration must be given to all appropriate factors, including volume of business, number of employees, financial resources,  competitive status or position, ownership or control of materials, processes, patents, license agreements, facilities, sales territory, and nature of business activity. See 15 U.S.C. 632.
+      A concern, including its affiliates, that is independently owned and operated, not dominant in the field of operation in which it is bidding on Government contracts, and qualified as a small business under the criteria and size standards in 13 CFR part 121 (see 19.102). Such a concern is "not dominant in its field of operation" when it does not exercise a controlling or major influence on a national basis in a kind of business activity in which a number of business concerns are primarily engaged. In determining whether dominance exists, consideration must be given to all appropriate factors, including volume of business, number of employees, financial resources, competitive status or position, ownership or control of materials, processes, patents, license agreements, facilities, sales territory, and nature of business activity. See 15 U.S.C. 632.
 
   SME:
     type: acronym
@@ -2265,7 +2265,7 @@ entries:
   Termination:
     type: term
     description: |
-      (1) "Termination for convenience" means the exercise of the Government's right to completely or partially terminate performance of work under a contract when it is in the Government's interest.  (2) "Termination for default" means the exercise of the Government's right to completely or partially terminate a contract because of the contractor's actual or anticipated failure to perform its contractual obligations. (3) "Termination inventory" means any property purchased, supplied,  manufactured, furnished, or otherwise acquired for the performance of a contract subsequently terminated and properly allocable to the terminated portion of the contract."
+      (1) "Termination for convenience" means the exercise of the Government's right to completely or partially terminate performance of work under a contract when it is in the Government's interest.  (2) "Termination for default" means the exercise of the Government's right to completely or partially terminate a contract because of the contractor's actual or anticipated failure to perform its contractual obligations. (3) "Termination inventory" means any property purchased, supplied, manufactured, furnished, or otherwise acquired for the performance of a contract subsequently terminated and properly allocable to the terminated portion of the contract."
 
   Time-and-materials contract:
     type: term
@@ -2310,7 +2310,7 @@ entries:
   Transportation Security Administration:
     type: term
     description: |
-      'The TSA is an agency within DHS consisting of 50,000 security officers, inspectors, directors,  and air marshals who protect the nation''s transportation systems for safe travel TSA looks for bombs at checkpoints in airports, we inspect rail cars, patrols subways with law enforcement officials, and works to make all modes of transportation safe.'
+      'The TSA is an agency within DHS consisting of 50,000 security officers, inspectors, directors, and air marshals who protect the nation''s transportation systems for safe travel TSA looks for bombs at checkpoints in airports, we inspect rail cars, patrols subways with law enforcement officials, and works to make all modes of transportation safe.'
 
   U.S.:
     type: acronym
@@ -2419,7 +2419,7 @@ entries:
   Warranty:
     type: term
     description: |
-      Promise or affirmation given by a contractor to the Government regarding the nature, usefulness,  or condition of the supplies or performance of services furnished under the contract.
+      Promise or affirmation given by a contractor to the Government regarding the nature, usefulness, or condition of the supplies or performance of services furnished under the contract.
 
   WOSB:
     type: acronym
