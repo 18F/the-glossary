@@ -1,32 +1,29 @@
-require 'minitest/autorun'
+require './test/test_helper'
 require './lib/markdownify'
 
 describe Markdownify do
   describe "with a valid glossary.yml" do
     it "renders markdown" do
       subject = Markdownify.new('./test/test_glossary.yml')
-      assert_equal valid_markdown, subject._perform
+      assert_equal valid_markdown, subject._perform, highlight: true
     end
   end
-end
-
-def glossary_data
-  entries = [ valid_acronym,
-              valid_acronym_multi,
-              valid_term_matching_crossrefs,
-              valid_term_pop_1,
-              valid_term_pop_2,
-              ].inject(&:merge)
-  { entries: entries }.to_yaml
 end
 
 def valid_markdown
   <<~MARKDOWN
     ### Acronyms & Initialisms
 
-    <a name=\"acronym-FIDO\"></a>[FIDO](#federal-interagency-databases-online) | <a name=\"acronym-POP\"></a>POP [(1)](#period-of-performance) [(2)](#procurement-operating-procedure)
+    | | |
+    |-|-|
+    | F | <a name=\"acronym-FEMA\"></a>[FEMA](#federal-emergency-management-agency) &bull; <a name=\"acronym-FIDO\"></a>[FIDO](#federal-interagency-databases-online) |
+    | P | <a name=\"acronym-POP\"></a>POP [(1)](#period-of-performance) [(2)](#procurement-operating-procedure) |
+
 
     ### Terms & Definitions
+
+    **<a name=\"federal-emergency-management-agency\"></a>[Federal Emergency Management Agency](#federal-emergency-management-agency)** (FEMA) \\
+    _No definition provided._
 
     **<a name=\"federal-interagency-databases-online\"></a>[Federal Interagency Databases Online](#federal-interagency-databases-online)** (FIDO) \\
     Fido.gov is an internet location for finding information related to federal interagency databases.

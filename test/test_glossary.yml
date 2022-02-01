@@ -1,22 +1,35 @@
 entries:
-  :FIDO:
-    :type: acronym
-    :term: Federal Interagency Databases Online
-  :POP:
-    :type: acronym
-    :term:
+
+  FEMA:
+    type: acronym
+    term: Federal Emergency Management Agency
+
+  Federal Emergency Management Agency:
+    type: term
+    description: null
+
+  FIDO:
+    type: acronym
+    term: Federal Interagency Databases Online
+
+  POP:
+    type: acronym
+    term:
     - Period of performance
     - Procurement Operating Procedure
-  :Federal Interagency Databases Online:
-    :type: term
-    :description: Fido.gov is an internet location for finding information related to
+
+  Federal Interagency Databases Online:
+    type: term
+    description: Fido.gov is an internet location for finding information related to
       federal interagency databases.
-    :cross_references:
+    cross_references:
     - Period of performance
     - Procurement Operating Procedure
-  :Period of performance:
-    :type: term
-    :description: Description for period of performance
-  :Procurement Operating Procedure:
-    :type: term
-    :description: Description for procurement operating procedure
+
+  Period of performance:
+    type: term
+    description: Description for period of performance
+
+  Procurement Operating Procedure:
+    type: term
+    description: Description for procurement operating procedure
