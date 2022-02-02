@@ -10,7 +10,7 @@ class GlossaryValidator
 
   include Common
 
-  attr_reader :data, :key
+  attr_reader :data, :key, :path
 
   # @param path [String | nil] path to glossary file
   def initialize(path: nil)
@@ -25,10 +25,30 @@ class GlossaryValidator
   # Validate all entries
   def perform
     validator = EntryValidator.new(data[key])
+    report_duplicate_keys
     data[key].each do |entry|
       validator.validate([entry].to_h)
     end
   ensure
+    display_reminders(validator)
+  end
+
+  def report_duplicate_keys
+    file = File.read(path)
+    keys = file.scan(/^\s{2}(\S{1}.*):$/).flatten
+    keys.tally.detect do |k, count|
+      case count
+      when 0 then
+        # NO OP
+      when 1
+        # NO OP
+      else
+        raise DuplicateKeyError.new(k, count)
+      end
+    end
+  end
+
+  def display_reminders(validator)
     # Regardless of errors, show the reminders
     if validator.reminders.any?
       puts "\nReminders:"
@@ -37,8 +57,9 @@ class GlossaryValidator
       puts "\n"
     end
   end
-
 end
+
+
 
 
 # Validates an entry. Needs the entire glossary file to work,
@@ -139,8 +160,13 @@ class EntryValidator
         raise TermNotFoundError.new(key, term)
       end
 
-      unless context[term.to_sym][:type] == "term"
+      case context[term.to_sym][:type]
+      when "acronym" then
         raise AcronymReferenceError.new(key, term)
+      when "term" then
+        # NO OP
+      else
+        raise EntryTypeError.new(term)
       end
     end
 
@@ -166,6 +192,29 @@ class EntryValidator
     end
   end
 
+end
+
+
+class DuplicateKeyError < StandardError
+  attr_reader :key, :count
+
+  def initialize(key, count)
+    @key = key
+    @count = count
+    super(message)
+  end
+
+  def message
+    <<~ERR
+
+
+      I found #{count} entries for "#{key}".
+
+      How can I know which one to use?
+
+      Please delete or combine until there is only one entry for "#{key}".
+    ERR
+  end
 end
 
 class MissingTermError < StandardError

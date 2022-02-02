@@ -4,9 +4,25 @@ require './test/fixtures'
 
 include Fixtures
 
+describe GlossaryValidator do
+  describe "with a valid glossary" do
+    it "raises no errors" do
+      subject = GlossaryValidator.new(path: './test/test_glossary.yml')
+      assert subject.perform
+    end
+  end
+
+  describe "with a glossary containing duplicate entries" do
+    it "raises an error" do
+      subject = GlossaryValidator.new(path: './test/test_glossary_dupe.yml')
+      assert_raises (DuplicateKeyError) { subject.perform }
+    end
+  end
+end
+
 describe EntryValidator do
   describe "with a malformed entry" do
-    it "is errors" do
+    it "errors" do
       subject = EntryValidator.new({})
       assert_raises (ArgumentError) { subject.validate({a: 1, b: 2}) }
     end
