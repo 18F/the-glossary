@@ -4,10 +4,6 @@ entries:
     type: acronym
     term: Federal Emergency Management Agency
 
-  Federal Emergency Management Agency:
-    type: term
-    description: null
-
   FIDO:
     type: acronym
     term: Federal Interagency Databases Online
@@ -18,6 +14,18 @@ entries:
     - Period of performance
     - Procurement Operating Procedure
 
+  Period of performance:
+    type: term
+    description: Description for period of performance
+
+  Federal Emergency Management Agency:
+    type: term
+    description: null
+
+  Procurement Operating Procedure:
+    type: term
+    description: Description for procurement operating procedure
+
   Federal Interagency Databases Online:
     type: term
     description: |-
@@ -26,11 +34,3 @@ entries:
     cross_references:
     - Period of performance
     - Procurement Operating Procedure
-
-  Period of performance:
-    type: term
-    description: Description for period of performance
-
-  Procurement Operating Procedure:
-    type: term
-    description: Description for procurement operating procedure
