@@ -3098,4 +3098,5 @@ entries:
     term: Work in Progress
 
   Work in Progress:
+    type: term
     description: null
