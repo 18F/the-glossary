@@ -24,11 +24,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      - name: Run unit tests
+        run: rake test
 
-      # Runs a single command using the runners shell
       - name: Validate the glossary
         run: bin/validate
 
-      # Runs a set of commands using the runners shell
       - name: Build the glossary's Markdown file
         run: bin/build
