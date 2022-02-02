@@ -20,8 +20,9 @@ entries:
 
   Federal Interagency Databases Online:
     type: term
-    description: Fido.gov is an internet location for finding information related to
-      federal interagency databases.
+    description: |-
+      Fido.gov is an internet location for finding information related to federal interagency databases.
+
     cross_references:
     - Period of performance
     - Procurement Operating Procedure

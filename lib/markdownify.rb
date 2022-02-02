@@ -82,13 +82,16 @@ class Markdownify
       "".tap do |str|
         str << "**#{anchor(key)}#{self_link(key)}**"
         str << (has_acronym?(key) ? " (#{acronym_for(key).first}) \\\n" : " \\\n")
-        str << (values[:description] || "_No definition provided._\n")
+        str << case values[:description]
+               when nil then "_No definition provided._\n"
+               else values[:description] + "\n"
+               end
         if has_overloaded_acronym?(key)
           acro = acronym_for(key).first
-          str << "\n\n_Not the definition you were looking for?_ [Back to #{acro}](#acronym-#{acro})\n"
+          str << "\n_Not the definition you were looking for?_ [Back to #{acro}](#acronym-#{acro})\n"
         end
         if values[:cross_references]
-          str << "\n\nCross-references:\n\n"
+          str << "\nCross-references:\n\n"
           Array(values[:cross_references]).each { |crossref| str << crossref_link(crossref) }
         end
       end
