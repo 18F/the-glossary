@@ -3094,6 +3094,8 @@ entries:
         Guidelines for web developers and designers to build inclusive software.
 
   WIP:
-    type: term
-    description: |-
-      Work in Progress.
+    type: acronym
+    term: Work in Progress
+
+  Work in Progress:
+    description: null

@@ -78,21 +78,23 @@ class Markdownify
   end
 
   def definition_content
-    data[:terms].each_pair.map do |key, values|
-      "".tap do |str|
-        str << "**#{anchor(key)}#{self_link(key)}**"
-        str << (has_acronym?(key) ? " (#{acronym_for(key).first}) \\\n" : " \\\n")
-        str << (values[:description] || "_No definition provided._\n")
-        if has_overloaded_acronym?(key)
-          acro = acronym_for(key).first
-          str << "\n\n_Not the definition you were looking for?_ [Back to #{acro}](#acronym-#{acro})\n"
-        end
-        if values[:cross_references]
-          str << "\n\nCross-references:\n\n"
-          Array(values[:cross_references]).each { |crossref| str << crossref_link(crossref) }
+    data[:terms].
+      sort_by { |k,v| k.to_s.downcase }.
+      each.map do |key, values|
+        "".tap do |str|
+          str << "**#{anchor(key)}#{self_link(key)}**"
+          str << (has_acronym?(key) ? " (#{acronym_for(key).first}) \\\n" : " \\\n")
+          str << (values[:description] || "_No definition provided._\n")
+          if has_overloaded_acronym?(key)
+            acro = acronym_for(key).first
+            str << "\n\n_Not the definition you were looking for?_ [Back to #{acro}](#acronym-#{acro})\n"
+          end
+          if values[:cross_references]
+            str << "\n\nCross-references:\n\n"
+            Array(values[:cross_references]).each { |crossref| str << crossref_link(crossref) }
+          end
         end
       end
-    end
   end
 
   def has_overloaded_acronym?(key)
