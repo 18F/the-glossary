@@ -78,7 +78,9 @@ class Markdownify
   end
 
   def definition_content
-    data[:terms].each_pair.map do |key, values|
+    data[:terms].
+      sort_by { |k,v| k.to_s.downcase }.
+      map do |key, values|
       "".tap do |str|
         str << "**#{anchor(key)}#{self_link(key)}**"
         str << (has_acronym?(key) ? " (#{acronym_for(key).first}) \\\n" : " \\\n")
