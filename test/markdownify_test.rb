@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require './test/test_helper'
 require './lib/markdownify'
 
 describe Markdownify do
-  describe "with a valid glossary.yml" do
-    it "renders markdown" do
+  describe 'with a valid glossary.yml' do
+    it 'renders markdown' do
       subject = Markdownify.new('./test/test_glossary.yml')
       assert_equal valid_markdown, subject._perform, highlight: true
     end

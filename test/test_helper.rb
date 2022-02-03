@@ -1,3 +1,5 @@
-require "minitest/autorun"
-require "minitest/reporters"
+# frozen_string_literal: true
+
+require 'minitest/autorun'
+require 'minitest/reporters'
 Minitest::Reporters.use!

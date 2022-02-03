@@ -1,0 +1,50 @@
+inherit_from: .rubocop_todo.yml
+
+inherit_mode:
+  merge:
+    - Exclude
+
+AllCops:
+  SuggestExtensions: false
+  Exclude:
+    - Rakefile
+    - Gemfile
+
+# Specific styles, inspired by elm-format
+
+Metrics/ClassLength:
+  Enabled: false
+
+Layout/MultilineHashBraceLayout:
+  EnforcedStyle: new_line
+
+Layout/MultilineMethodCallBraceLayout:
+  EnforcedStyle: new_line
+
+Layout/MultilineHashKeyLineBreaks:
+  Enabled: true
+
+Layout/MultilineMethodArgumentLineBreaks:
+  Enabled: true
+
+# test, bin
+
+Metrics/BlockLength:
+  Exclude:
+    - test/**/*
+
+Metrics/ModuleLength:
+  Exclude:
+    - test/**/*
+
+Layout/LineLength:
+  Exclude:
+    - test/**/*
+
+Style/MixinUsage:
+  Exclude:
+    - test/**/*
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - bin/**/*

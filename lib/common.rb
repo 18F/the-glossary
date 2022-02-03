@@ -1,18 +1,13 @@
-# Thanks https://avdi.codes/recursively-symbolize-keys/
+# frozen_string_literal: true
 
+# Method(s) common to many modules
 module Common
+  # Thanks https://avdi.codes/recursively-symbolize-keys/
   def symbolize_keys(hash)
-    hash.inject({}){|result, (key, value)|
-      new_key = case key
-                when String then key.to_sym
-                else key
-                end
-      new_value = case value
-                  when Hash then symbolize_keys(value)
-                  else value
-                  end
+    hash.each_with_object({}) do |(key, value), result|
+      new_key = key.is_a?(String) ? key.to_sym : key
+      new_value = value.is_a?(Hash) ? symbolize_keys(value) : value
       result[new_key] = new_value
-      result
-    }
+    end
   end
 end
