@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'yaml'
 require './lib/common'
 
@@ -7,7 +9,6 @@ require './lib/common'
 
 # Validates an entire glossary file
 class GlossaryValidator
-
   include Common
 
   attr_reader :data, :key, :path
@@ -38,7 +39,7 @@ class GlossaryValidator
     keys = file.scan(/^\s{2}(\S{1}.*):$/).flatten
     keys.tally.detect do |k, count|
       case count
-      when 0 then
+      when 0
         # NO OP
       when 1
         # NO OP
@@ -50,24 +51,18 @@ class GlossaryValidator
 
   def display_reminders(validator)
     # Regardless of errors, show the reminders
-    if validator.reminders.any?
-      puts "\nReminders:"
-      puts "----------\n"
-      validator.reminders.each { |r| puts "- #{r}"}
-      puts "\n"
-    end
+    return unless validator.reminders.any?
+
+    puts "\nReminders:"
+    puts "----------\n"
+    validator.reminders.each { |r| puts "- #{r}" }
+    puts "\n"
   end
 end
-
-
-
 
 # Validates an entry. Needs the entire glossary file to work,
 # as it needs to determine whether linked terms are present.
 class EntryValidator
-
-  @@type_entry = [:term, :acronym]
-
   attr_reader :context
   attr_accessor :reminders
 
@@ -79,16 +74,17 @@ class EntryValidator
 
   # @param data [Hash] data for a single entry
   def validate(data)
-    raise ArgumentError if (data.keys.count > 1)
+    raise ArgumentError if data.keys.count > 1
+
     key = data.keys.first
     values = data.values.first
     case values[:type]
-    when "term" then
+    when 'term'
       validate_term(data)
-    when "acronym" then
+    when 'acronym'
       validate_acronym(data)
     else
-      raise EntryTypeError.new(key)
+      raise EntryTypeError, key
     end
   end
 
@@ -101,36 +97,39 @@ class EntryValidator
   def validate_term(term_data)
     key = term_data.keys.first
     values = term_data.values.first
+    raise TermMissingDescriptionError, key unless values.key?(:description)
 
-    unless values.has_key?(:description)
-      raise TermMissingDescriptionError.new(key)
-    end
+    validate_term_has_description(key, values)
+    validate_term_crossreferences_exist(key, values)
+    validate_no_extra_keys(
+      key,
+      values,
+      %i[type
+         description
+         longform
+         cross_references]
+    )
+    true
+  end
 
+  def validate_term_has_description(key, values)
     desc = values[:description]
     if desc.nil?
       reminders << "add a description for \"#{values[:longform] || key}\""
     elsif desc.is_a?(String) && !desc.empty?
-      # NO OP
+      true
     else
-      raise TermMissingDescriptionError.new(key)
+      raise TermMissingDescriptionError, key
     end
+  end
 
+  def validate_term_crossreferences_exist(key, values)
     Array(values[:cross_references]).each do |crossref|
-      context.fetch(crossref.to_sym) {
-        raise TermNotFoundError.new(key, crossref, true)
-      }
+      context.fetch(crossref.to_sym) do
+        raise TermNotFoundError.new(key, crossref, crossref: true)
+      end
     end
-
-    assert_no_extra_keys(
-      key,
-      values,
-      [ :type,
-        :description,
-        :longform,
-        :cross_references
-      ]
-    )
-    return true
+    true
   end
 
   # Validates an acronym. At present it:
@@ -139,62 +138,62 @@ class EntryValidator
     key = acronym_data.keys.first
     values = acronym_data.values.first
 
-    # term defined
+    validate_term_defined(key, values)
+    validate_acronym_term_exists(key, values)
+    validate_no_extra_keys(key, values, %i[term type])
+    true
+  end
+
+  def validate_term_defined(key, values)
     case values[:term].class.to_s
-    when "String" then
+    when 'String'
       check_term_defined(values[:term])
-    when "Array" then
+    when 'Array'
       check_term_defined(values[:term])
-    when "NilClass" then
-      raise MissingTermError.new(key)
+    when 'NilClass'
+      raise MissingTermError, key
     else
-      raise MissingTermError.new(key)
+      raise MissingTermError, key
     end
-
-    # term is in the glossary
-    terms = Array(values[:term])
-    terms.each do |term|
-      # puts term.to_sym.inspect
-      # puts context.inspect
-      unless context[term.to_sym]
-        raise TermNotFoundError.new(key, term)
-      end
-
-      case context[term.to_sym][:type]
-      when "acronym" then
-        raise AcronymReferenceError.new(key, term)
-      when "term" then
-        # NO OP
-      else
-        raise EntryTypeError.new(term)
-      end
-    end
-
-    # make sure there are no extra keys
-    assert_no_extra_keys(key, values, [:term, :type])
-
-    return true
   end
 
   def check_term_defined(term)
     if term.empty?
       MissingTermError.new(key)
     else
-      return true
+      true
     end
   end
 
-  def assert_no_extra_keys(key, value_set, only_allow=[])
+  def validate_acronym_term_exists(key, values)
+    # term is in the glossary
+    terms = Array(values[:term])
+    terms.each do |term|
+      # puts term.to_sym.inspect
+      # puts context.inspect
+      raise TermNotFoundError.new(key, term) unless context[term.to_sym]
+
+      case context[term.to_sym][:type]
+      when 'acronym'
+        raise AcronymReferenceError.new(key, term)
+      when 'term'
+        # NO OP
+      else
+        raise EntryTypeError, term
+      end
+    end
+  end
+
+  def validate_no_extra_keys(key, value_set, only_allow = [])
     keychain = value_set.keys
-    only_allow.each { |key| keychain.delete(key) }
-    unless keychain.empty?
-      raise BadSchemaError.new(key, keychain)
-    end
-  end
+    only_allow.each { |allowed_key| keychain.delete(allowed_key) }
+    raise BadSchemaError.new(key, keychain) unless keychain.empty?
 
+    true
+  end
 end
 
-
+# Raised when the glossary file contains duplicate keys
 class DuplicateKeyError < StandardError
   attr_reader :key, :count
 
@@ -217,12 +216,13 @@ class DuplicateKeyError < StandardError
   end
 end
 
+# Raised when an acronym doesn't define any terms
 class MissingTermError < StandardError
   attr_reader :key, :term
 
   def initialize(key)
     @key = key
-    @term = key.to_s.split('').map { |letter| "#{letter}____ "}.join()
+    @term = key.to_s.split('').map { |letter| "#{letter}____ " }.join
     super(message)
   end
 
@@ -252,10 +252,11 @@ class MissingTermError < StandardError
   end
 end
 
+# Raised when a term that should exist doesn't exist.
 class TermNotFoundError < StandardError
   attr_reader :key, :missing_term, :crossref
 
-  def initialize(key, missing_term, crossref=false)
+  def initialize(key, missing_term, crossref: false)
     @key = key
     @missing_term = missing_term
     @crossref = crossref
@@ -263,8 +264,8 @@ class TermNotFoundError < StandardError
   end
 
   def message
-    noun = crossref ? "term" : "acronym"
-    verbs = crossref ? "cross-references" : "defines"
+    noun = crossref ? 'term' : 'acronym'
+    verbs = crossref ? 'cross-references' : 'defines'
     <<~ERR
 
 
@@ -286,6 +287,7 @@ class TermNotFoundError < StandardError
   end
 end
 
+# Raised when a term does not have a description (definition)
 class TermMissingDescriptionError < StandardError
   attr_reader :key
 
@@ -320,6 +322,7 @@ class TermMissingDescriptionError < StandardError
   end
 end
 
+# Raised when an entry has more keys than needed
 class BadSchemaError < StandardError
   attr_reader :key, :extra_keys
 
@@ -335,13 +338,14 @@ class BadSchemaError < StandardError
 
       Your entry \"#{key}\" defines the following attributes (a.k.a. "keys"):
 
-        #{extra_keys.join(", ")}
+        #{extra_keys.join(', ')}
 
       These attributes aren't needed. Please delete them!
     ERR
   end
 end
 
+# Raised when an acronym refers to another acronym
 class AcronymReferenceError < StandardError
   attr_reader :key, :points_to
 
@@ -371,9 +375,9 @@ class AcronymReferenceError < StandardError
           You explain what the term means.
     ERR
   end
-
 end
 
+# Raised when an entry doesn't have a type.
 class EntryTypeError < StandardError
   attr_reader :key
 
@@ -386,14 +390,14 @@ class EntryTypeError < StandardError
     key_str = key.to_s
     # If it's all uppercase and shorter than 10 characters,
     # it's probably an acronym
-    if (key_str <=> key_str.upcase) == 0 && key_str.length < 10
-      return "acronym"
+    if (key_str <=> key_str.upcase).zero? && key_str.length < 10
+      'acronym'
     else
-      return "term"
+      'term'
     end
-  rescue => e
+  rescue StandardError
     # Ignore all errors and default to "term" if there's an issue.
-    "term"
+    'term'
   end
 
   def message
