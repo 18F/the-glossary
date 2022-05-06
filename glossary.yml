@@ -708,6 +708,15 @@ entries:
       • Tenacity
       • Perseverance
 
+  EOD:
+    type: acronym
+    term: Entrance on duty
+  
+  Entrance on duty:
+    type: term
+    description: |-
+      The date on which a person completes the necessary paperwork and is sworn in as an employee
+
   eSRS:
     type: acronym
     term: Electronic Subcontracting Reporting System
@@ -2179,6 +2188,14 @@ entries:
     type: term
     description: |-
       When the solicitation is not posted as "full and open competition" on Federal Business Opportunities, suggested sources should be included with the procurement package.
+
+  swivel chair:
+    type: term
+    description: The process of manually entering data into multiple systems
+
+  swivel chairing:
+    type: term
+    description: The process of manually entering data into multiple systems
 
   T&M:
     type: acronym
