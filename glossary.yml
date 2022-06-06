@@ -3069,6 +3069,11 @@ entries:
     description: |-
       The Technology Transformation Services aim to improve the public's experience with the government by helping agencies build, buy, and share technology that allows them to better serve the public. This is the TTS Handbook, and you may be reading it because you're an employee of TTS. TTS is part of FAS, which is part of GSA.
 
+  use or lose:
+    type: term
+    description: |-
+      "Use or Lose" is the number of Annual Leave hours you would forfeit at the end of the leave year, if you do not use any of your hours between now and then. Check out the TTS Handbook page for more information and examples: https://handbook.tts.gsa.gov/travel-and-leave/leave/#annual-leave
+
   USDS:
     type: acronym
     term: United States Digital Service
