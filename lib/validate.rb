@@ -5,7 +5,6 @@ require './lib/common'
 
 # @todo Acronyms must reference a term
 # @todo Cross-references are set as arrays
-# @todo Cross-references are always terms
 
 # Validates an entire glossary file
 class GlossaryValidator
@@ -101,6 +100,7 @@ class EntryValidator
 
     validate_term_has_description(key, values)
     validate_term_crossreferences_exist(key, values)
+    validate_term_crossreference_is_term(key, values)
     validate_no_extra_keys(
       key,
       values,
@@ -129,6 +129,20 @@ class EntryValidator
         raise TermNotFoundError.new(key, crossref, crossref: true)
       end
     end
+    true
+  end
+
+  def validate_term_crossreference_is_term(key, values)
+    Array(values[:cross_references]).each do |crossref|
+      crossref_entry = context[crossref.to_sym]
+      case crossref_entry[:type]
+      when 'term'
+        true
+      else
+        raise CrossReferenceIsAnAcronym.new(key, crossref, crossref_entry[:term])
+      end
+    end
+
     true
   end
 
@@ -283,6 +297,29 @@ class TermNotFoundError < StandardError
             cross_references:
               - Terms that are related
               - to this one.
+    ERR
+  end
+end
+
+class CrossReferenceIsAnAcronym < StandardError
+  attr_reader :key, :crossref, :crossref_term
+
+  def initialize(key, crossref, crossref_term)
+    @key = key
+    @crossref = crossref
+    @crossref_term = crossref_term
+  end
+
+  def message
+    <<~ERR
+
+
+      The term \"#{key}\" cross-references the acronym
+      \"#{crossref}\". Terms should cross-reference other
+      terms instead of acronyms.
+
+      Should \"#{key}\" refer to \"#{crossref_term}\" instead
+      of \"#{crossref}\"?
     ERR
   end
 end
