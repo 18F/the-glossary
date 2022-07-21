@@ -301,6 +301,7 @@ class TermNotFoundError < StandardError
   end
 end
 
+# Raised when a term cross-references an acronym
 class CrossReferenceIsAnAcronym < StandardError
   attr_reader :key, :crossref, :crossref_term
 
@@ -308,6 +309,7 @@ class CrossReferenceIsAnAcronym < StandardError
     @key = key
     @crossref = crossref
     @crossref_term = crossref_term
+    super(message)
   end
 
   def message
