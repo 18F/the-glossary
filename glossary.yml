@@ -42,7 +42,9 @@ entries:
 
   ADR:
     type: acronym
-    term: Alternative dispute resolution
+    term: 
+      - Alternative dispute resolution
+      - Architecture Decision Record
 
   Alternative dispute resolution:
     type: term
@@ -66,6 +68,24 @@ entries:
     type: term
     description: |-
       A cost is properly allocable to a contract if it is incurred specifically for the contract or is incurred for another activity that also benefits the contract. With regard to the allocability of costs claimed, the COR must look for any direct costs that appear to have no connection with the contract work.  If the COR cannot understand why the contractor would need billed materials or effort to perform the contract, then the costs may have been charged to the contract in error.
+
+  American Rescue Plan Act:
+    type: term
+    description: |-
+      Economic stimulus legislation passed in 2021 that included significant funding for technology modernization. GSA received about $1 billion from this legislation.
+
+  ARPA:
+    type: acronym
+    term: American Rescue Plan Act
+
+  ARP:
+    type: acronym
+    term: American Rescue Plan Act
+
+  Architecture Decision Record:
+    type: term
+    description: |-
+      A written record of choices made by people involved in the creation of software. There is [an article about ADRs](https://18f.gsa.gov/2021/07/06/architecture_decision_records_helpful_now_invaluable_later/) on the 18F blog.
 
   Anti-Deficiency Act:
     type: term
@@ -3029,6 +3049,14 @@ entries:
       type: term
       description: null
 
+  Software Development Lifecycle:
+    type: term
+    description: null
+
+  SDLC:
+    type: acronym
+    term: Software Development Lifecycle
+
   Solutions:
     type: term
     description: |-
@@ -3037,6 +3065,14 @@ entries:
   SOP:
     type: acronym
     term: Standard Operating Procedure
+  
+  System of Records Notice:
+    type: term
+    description: |-
+      A system of records notice (or “SORN”) is published by a Federal agency in the Federal Register upon the establishment and/or modification of a system of records describing the existence and character of the system. A SORN identifies the system of records, the purpose(s) of the system, the authority for maintenance of the records, the categories of records maintained in the system, the categories of individuals about whom records are maintained, the routine uses to which the records are subject, and additional details about the system.
+  SORN:
+    type: acronym
+    term: System of Records Notice
 
   Standard Operating Procedure:
     type: term
