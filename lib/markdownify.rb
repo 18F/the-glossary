@@ -50,7 +50,7 @@ class Markdownify
 
   def build_tags_by_letter
     results = Hash.new { |h, k| h[k] = [] }
-    data[:acronyms].each_pair do |key, values|
+    data[:acronyms].sort.each do |key, values|
       tag = tag_for_acronym(key, values)
       next if tag.nil?
 
