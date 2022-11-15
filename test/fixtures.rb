@@ -149,6 +149,18 @@ module Fixtures
 }
   end
 
+  def invalid_term_crossrefs_acronym
+    { "A term in the glossary":
+      { type: 'term',
+        description: "This is a term that appears in the glossary and its description written here so people know it's just a term.",
+        cross_references:
+        [
+          'ACRO'
+        ]
+      }
+    }
+  end
+
   def invalid_term_extra_keys
     { "Federal Interagency Databases Online":
       { type: 'term',
@@ -182,6 +194,14 @@ module Fixtures
     { ODIF:
       { type: 'acronym',
         term: 'Online Database of Interagency Federation'
+}
+}
+  end
+
+  def context_for_term_cross_references_acronym
+    { ACRO:
+      { type: 'acronym',
+        term: 'Letters That Stand For Words'
 }
 }
   end
