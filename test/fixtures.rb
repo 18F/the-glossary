@@ -11,8 +11,8 @@ module Fixtures
     { FIDO:
       { type: 'acronym',
         term: 'Federal Interagency Databases Online'
-}
-}
+      }
+    }
   end
 
   def valid_acronym_multi
@@ -21,8 +21,8 @@ module Fixtures
         term:
         ['Period of performance',
          'Procurement Operating Procedure']
-}
-}
+      }
+    }
   end
 
   # ACRONYMS : INVALID
@@ -30,21 +30,21 @@ module Fixtures
   def invalid_acronym_no_type
     { FIDO:
       { term: 'Federal Interagency Databases Online' }
-}
+    }
   end
 
   def invalid_acronym_no_term
     { FIDO:
       { type: 'acronym' }
-}
+    }
   end
 
   def invalid_acronym_null_term
     { FIDO:
       { type: 'acronym',
         term: nil
-}
-}
+      }
+    }
   end
 
   def invalid_acronym_extra_keys
@@ -52,16 +52,16 @@ module Fixtures
       { type: 'acronym',
         term: 'Federal Interagency Databases Online',
         longform: 'hey'
-}
-}
+      }
+    }
   end
 
   def invalid_acronym_refers_to_acronym
     { FIDO:
       { type: 'acronym',
         term: 'ODIF'
-}
-}
+      }
+    }
   end
 
   #
@@ -75,16 +75,16 @@ module Fixtures
       { type: 'term',
         description: 'Fido.gov is an internet location for finding information related to federal interagency databases.',
         longform: 'An even more expanded version of the term.'
-}
-}
+      }
+    }
   end
 
   def valid_term_null_desc
     { "Federal Interagency Databases Online":
       { type: 'term',
         description: nil
-}
-}
+      }
+    }
   end
 
   def valid_term_pop1
@@ -92,7 +92,7 @@ module Fixtures
       "Period of performance":
         { type: 'term',
           description: 'Description for period of performance'
-}
+        }
     }
   end
 
@@ -101,7 +101,7 @@ module Fixtures
       "Procurement Operating Procedure":
         { type: 'term',
           description: 'Description for procurement operating procedure'
-}
+        }
     }
   end
 
@@ -109,8 +109,8 @@ module Fixtures
     { "Federal Interagency Databases Online":
       { type: 'term',
         description: 'Fido.gov is an internet location for finding information related to federal interagency databases.'
-}
-}
+      }
+    }
   end
 
   def valid_term_matching_crossrefs
@@ -120,8 +120,8 @@ module Fixtures
         cross_references:
         ['Period of performance',
          'Procurement Operating Procedure']
-}
-}
+      }
+    }
   end
 
   # TERMS : INVALID
@@ -133,7 +133,7 @@ module Fixtures
   def invalid_term_no_desc
     { "Federal Interagency Databases Online":
       { type: 'term' }
-}
+    }
   end
 
   def invalid_term_mismatched_crossrefs
@@ -145,8 +145,20 @@ module Fixtures
           'Period of performance',
           'Not a match'
         ]
-}
-}
+      }
+    }
+  end
+
+  def invalid_term_crossrefs_acronym
+    { "A term in the glossary":
+      { type: 'term',
+        description: "This is a term that appears in the glossary and its description written here so people know it's just a term.",
+        cross_references:
+        [
+          'ACRO'
+        ]
+      }
+    }
   end
 
   def invalid_term_extra_keys
@@ -154,8 +166,8 @@ module Fixtures
       { type: 'term',
         description: 'Fido.gov is an internet location for finding information related to federal interagency databases.',
         has_extra_key: 'Yes'
-}
-}
+      }
+    }
   end
 
   #
@@ -182,7 +194,15 @@ module Fixtures
     { ODIF:
       { type: 'acronym',
         term: 'Online Database of Interagency Federation'
-}
-}
+      }
+    }
+  end
+
+  def context_term_cross_references_acronym
+    { ACRO:
+      { type: 'acronym',
+        term: 'Letters That Stand For Words'
+      }
+    }
   end
 end

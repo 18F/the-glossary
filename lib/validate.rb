@@ -5,7 +5,6 @@ require './lib/common'
 
 # @todo Acronyms must reference a term
 # @todo Cross-references are set as arrays
-# @todo Cross-references are always terms
 
 # Validates an entire glossary file
 class GlossaryValidator
@@ -91,6 +90,7 @@ class EntryValidator
   # Validates a term. At present it:
   #   - ensures that it has a `description` key (with content or an explicit `nil`)
   #   - ensures that all cross-referenced terms are present in the glossary
+  #   - ensures that all cross-referenced terms are terms and not acronyms
   #   - asserts that there are no extra keys for the entry
   #
   # @param term_data [Hash] data for a single entry of type 'term'
@@ -101,6 +101,7 @@ class EntryValidator
 
     validate_term_has_description(key, values)
     validate_term_crossreferences_exist(key, values)
+    validate_term_crossreference_is_term(key, values)
     validate_no_extra_keys(
       key,
       values,
@@ -129,6 +130,20 @@ class EntryValidator
         raise TermNotFoundError.new(key, crossref, crossref: true)
       end
     end
+    true
+  end
+
+  def validate_term_crossreference_is_term(key, values)
+    Array(values[:cross_references]).each do |crossref|
+      crossref_entry = context.fetch(crossref.to_sym)
+      case crossref_entry.fetch(:type)
+      when 'term'
+        # NO OP
+      else
+        raise CrossreferencesAcronymError.new(key, crossref, crossref_entry[:term])
+      end
+    end
+
     true
   end
 
@@ -283,6 +298,31 @@ class TermNotFoundError < StandardError
             cross_references:
               - Terms that are related
               - to this one.
+    ERR
+  end
+end
+
+# Raised when a term cross-references an acronym
+class CrossreferencesAcronymError < StandardError
+  attr_reader :key, :crossref, :crossref_term
+
+  def initialize(key, crossref, crossref_term)
+    @key = key
+    @crossref = crossref
+    @crossref_term = crossref_term
+    super(message)
+  end
+
+  def message
+    <<~ERR
+
+
+      The term \"#{key}\" cross-references the acronym
+      \"#{crossref}\". Terms should cross-reference other
+      terms instead of acronyms.
+
+      Should \"#{key}\" refer to \"#{crossref_term}\" instead
+      of \"#{crossref}\"?
     ERR
   end
 end
