@@ -827,6 +827,15 @@ entries:
     description: |-
       'On October 13, 1994, President Clinton signed into law the Federal Acquisition Streamlining Act of 1994 (FASA). The comprehensive acquisition reform legislation streamlines the Federal Government''s acquisition system and dramatically changes the way the Government performs its contracting functions. The statute seeks to: (1) increase the Government''s reliance on commercial goods and services; (2) streamline the procurement process for high-volume, low- value acquisitions; (3) improve access by small businesses to government contracting opportunities; (4) improve the bid protest process; and (5) extend the Truth in Negotiations Act to civilian agencies and raise to $500,000 the threshold for submitting certified cost or pricing data under that Act.'
 
+  FCSF:
+    type: acronym
+    term: Federal Citizen Services Fund
+    
+  Federal Citizen Services Fund:
+    type: term
+    description: |-
+      The Federal Citizen Services Fund (FCSF) enables public access and engagement with the Government through an array of public and agency facing products and programs, including TTS Solutions.
+
   FedBizOpps:
     type: term
     longform: Federal Business Opportunities
