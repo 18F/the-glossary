@@ -829,6 +829,10 @@ entries:
 
   FCSF:
     type: acronym
+    term: Federal Citizen Services Fund
+    
+  Federal Citizen Services Fund:
+    type: term
     description: |-
       The Federal Citizen Services Fund (FCSF) enables public access and engagement with the Government through an array of public and agency facing products and programs, including TTS Solutions.
 
