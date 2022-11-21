@@ -90,6 +90,7 @@ class EntryValidator
   # Validates a term. At present it:
   #   - ensures that it has a `description` key (with content or an explicit `nil`)
   #   - ensures that all cross-referenced terms are present in the glossary
+  #   - ensures that all cross-referenced terms are terms and not acronyms
   #   - asserts that there are no extra keys for the entry
   #
   # @param term_data [Hash] data for a single entry of type 'term'
@@ -134,12 +135,12 @@ class EntryValidator
 
   def validate_term_crossreference_is_term(key, values)
     Array(values[:cross_references]).each do |crossref|
-      crossref_entry = context[crossref.to_sym]
-      case crossref_entry[:type]
+      crossref_entry = context.fetch(crossref.to_sym)
+      case crossref_entry.fetch(:type)
       when 'term'
-        true
+        # NO OP
       else
-        raise CrossReferenceIsAnAcronym.new(key, crossref, crossref_entry[:term])
+        raise CrossreferencesAcronymError.new(key, crossref, crossref_entry[:term])
       end
     end
 
@@ -302,7 +303,7 @@ class TermNotFoundError < StandardError
 end
 
 # Raised when a term cross-references an acronym
-class CrossReferenceIsAnAcronym < StandardError
+class CrossreferencesAcronymError < StandardError
   attr_reader :key, :crossref, :crossref_term
 
   def initialize(key, crossref, crossref_term)

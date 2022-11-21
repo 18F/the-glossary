@@ -68,10 +68,10 @@ describe EntryValidator do
           assert_raises(TermNotFoundError) { subject.validate(invalid_term_mismatched_crossrefs) }
         end
       end
-      describe 'where one cross-reference is an acronym' do
+      describe 'to a valid acronym' do
         it 'is invalid' do
-          subject = EntryValidator.new(context_for_term_cross_references_acronym)
-          assert_raises(CrossReferenceIsAnAcronym) { subject.validate(invalid_term_crossrefs_acronym) }
+          subject = EntryValidator.new(context_term_cross_references_acronym)
+          assert_raises(CrossreferencesAcronymError) { subject.validate(invalid_term_crossrefs_acronym) }
         end
       end
     end
