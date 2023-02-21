@@ -348,6 +348,14 @@ entries:
       - Administrative contracting officer
       - Termination contracting officer
 
+  CS:
+    type: acronym
+    term: Contracting Specialist
+
+  Contracting Specialist:
+    type: term
+    description: null
+
   ACO:
     type: acronym
     term: Administrative contracting officer
@@ -836,9 +844,13 @@ entries:
     description: |-
       The Federal Citizen Services Fund (FCSF) enables public access and engagement with the Government through an array of public and agency facing products and programs, including TTS Solutions.
 
+  FBO:
+    type: acronym
+    term: Federal Business Opportunities
+
   FedBizOpps:
     type: term
-    longform: Federal Business Opportunities
+    longform: Federal Business Opportunities # Does that make this a "shorthand term"?
     description: |-
       The single point where Government business opportunities greater than $25,000, including synopses of proposed contract actions, solicitations, and associated information, can be accessed electronically by the public. The GPE is located at http://www.fedbizopps.gov.
 
@@ -849,7 +861,7 @@ entries:
 
   Federal Business Opportunities:
     type: term
-    longform: Governmentwide point of entry
+    longform: Governmentwide point of entry # How is this the longform?
     description: |-
       The single point where Government business opportunities greater than $25,000, including synopses of proposed contract actions, solicitations, and associated information, can be accessed electronically by the public. The GPE is located at http://www.fedbizopps.gov.
 
@@ -888,7 +900,6 @@ entries:
     description: |-
       Formerly "BAFO," a Final proposal revision is an offer submitted to the Government in a competitive negotiated procurement after discussions have been concluded. The Government will request such proposal revisions from all offerors still remaining in the competitive range.
     cross_references: Best and final offer
-
 
   FirstSource:
     type: term
@@ -1054,6 +1065,14 @@ entries:
     type: term
     description: |-
       Property in the possession of, or directly acquired by, the Government and subsequently furnished to the contractor for performance of a contract. Government-furnished property includes, but is not limited to, spares and property furnished for repair, maintenance, overhaul, or modification. Government-furnished property also includes contractor-acquired property if the contractor-acquired property is a deliverable under a cost contract when accepted by the Government for continued use under the contract.
+
+  GFE:
+    type: acronym
+    term: Government-furnished equipment
+
+  Government-furnished equipment:
+    type: term
+    description: null
 
   GOTS:
     type: acronym
