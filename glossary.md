@@ -54,7 +54,7 @@ A numeronym that stands for "accessibility."
 **<a name="abilityone"></a>[AbilityOne](#abilityone)** \
 AbilityOne (formerly JWOD) provides employment opportunities for over 40,000 Americans who are blind or have other severe disabilities by orchestrating government purchases of products and services provided by nonprofit agencies employing such individuals throughout the country.
 
-**<a name="acquisition"></a>[Acquisition](#acquisition)** \
+**<a name="acquisition"></a>[Acquisition](#acquisition)** (ACQ) \
 The acquiring by contract with appropriated funds of supplies or services (including construction)  by and for the use of the Federal Government through purchase or lease, whether the supplies or services are already in existence or must be created, developed, demonstrated, and evaluated.  Acquisition begins at the point when agency needs are established and includes the description of requirements to satisfy agency needs, solicitation and selection of sources, award of contracts, contract financing, contract performance, contract administration, and those technical and management functions directly related to the process of fulfilling agency needs by contract.
 
 **<a name="acquisition-plan"></a>[Acquisition plan](#acquisition-plan)** (AP) \
@@ -162,6 +162,9 @@ Used for accounting.
 
 **<a name="bundling"></a>[Bundling](#bundling)** \
 Consolidating two or more requirements for supplies or services previously provided or performed under separate smaller contracts, into a solicitation for a single contract that is likely to be unsuitable for award to a small business concern.
+
+**<a name="business-process-engineering"></a>[Business Process Reengineering](#business-process-engineering)** (BPE) \
+When an organization designs new workflows to update or replace existing workflows.
 
 **<a name="buy-american-act"></a>[Buy American Act](#buy-american-act)** \
 The Buy American Act requires that only domestic end products be acquired for public use, except for articles, materials, and supplies under certain circumstances.
@@ -555,6 +558,9 @@ The Federal Property and Administrative Services Act of 1949 is a United States 
 
 **<a name="federal-supply-schedule"></a>[Federal Supply Schedule](#federal-supply-schedule)** (FSS) \
 _No definition provided._
+
+**<a name="federal-risk-and-authorization-management-program"></a>[Federal Risk and Authorization Management Program](#federal-risk-and-authorization-management-program)** (FedRAMP) \
+A security process for government software.
 
 Cross-references:
 
