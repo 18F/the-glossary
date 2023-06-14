@@ -20,6 +20,10 @@ entries:
     type: term
     description: |-
       The acquiring by contract with appropriated funds of supplies or services (including construction)  by and for the use of the Federal Government through purchase or lease, whether the supplies or services are already in existence or must be created, developed, demonstrated, and evaluated.  Acquisition begins at the point when agency needs are established and includes the description of requirements to satisfy agency needs, solicitation and selection of sources, award of contracts, contract financing, contract performance, contract administration, and those technical and management functions directly related to the process of fulfilling agency needs by contract.
+  
+  ACQ:
+    type: acronym
+    term: Acquisition
 
   AP:
     type: acronym
