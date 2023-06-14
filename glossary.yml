@@ -1016,6 +1016,15 @@ entries:
     description: |-
       A fixed-price contract with economic price adjustment contract provides for upward and downward revision of the stated contract price upon the occurrence of specified contingencies.  Economic price adjustments are of three general types: (1) Adjustments based on established prices. These price adjustments are based on increases or decreases from an agreed-upon level in published or otherwise established prices of specific items or the contract end items. (2)  Adjustments based on actual costs of labor or material. These price adjustments are based on increases or decreases in specified costs of labor or material that the contractor actually experiences during contract performance. (3) Adjustments based on cost indexes of labor or material. These price adjustments are based on increases or decreases in labor or material cost standards or indexes that are specifically identified in the contract.
 
+  Federal Risk and Authorization Management Program:
+    type: term
+    description: |-
+      A security process for government software.
+
+  FedRAMP:
+    type: acronym
+    term: Federal Risk and Authorization Management Program
+
   FSS:
     type: acronym
     term: Federal Supply Schedule
