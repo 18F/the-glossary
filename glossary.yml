@@ -159,7 +159,7 @@ entries:
 
   BD:
     type: acronym
-    term: Blanket purchase agreement
+    term: Business development
 
   Business development:
     type: term
@@ -1073,6 +1073,11 @@ entries:
   GMT:
     type: acronym
     term: General Management Team
+
+  General Management Team:
+    type: term
+    description: |-
+      The GMT's purpose is alignment and collaboration among the leadership layers of 18F. It is made up of members of the 18F Leadership Team, supervisors, and non-supervisory chapter delegates from Account Management and Acquisitions.
 
   General market conditions:
     type: term
