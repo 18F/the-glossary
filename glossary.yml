@@ -118,7 +118,7 @@ entries:
   Authority to Operate:
     type: term
     description: |-
-      An ATO is an authorization approved by an Authorizing Official (AO) who accepts a system’s security risk. We say “ATO process” as shorthand. The process generally includes a series of steps to categorize, prepare, implement, assess, authorize, and monitor a system to ensure it meets an acceptable level of security – and that the system complies with the many laws and regulations applicable to federal information technology.
+      An ATO is an authorization approved by an Authorizing Official (AO) who accepts a system’s security risk. We say “ATO process” as shorthand. This authorization is sometimes required before a website will be allowed to engage with citizens. This process generally includes a series of steps to categorize, prepare, implement, assess, authorize, and monitor a system to ensure it meets an acceptable level of security – and that the system complies with the many laws and regulations applicable to federal information technology.
 
   BAFO:
     type: acronym
@@ -156,6 +156,24 @@ entries:
     type: term
     description: |-
       Consolidating two or more requirements for supplies or services previously provided or performed under separate smaller contracts, into a solicitation for a single contract that is likely to be unsuitable for award to a small business concern.
+
+  BD:
+    type: acronym
+    term: Business development
+
+  Business development:
+    type: term
+    description: |-
+      The process of looking for clients or partners.
+
+  BPR:
+    type: acronym
+    term: Business process reengineering
+
+  Business process reengineering:
+    type: term
+    description: |-
+      This is when an organization designs new workflows to update or replace existing workflows.
 
   Buy American Act:
     type: term
@@ -500,12 +518,12 @@ entries:
 
   COTS:
     type: acronym
-    term: Commercially available off-the-shelf
+    term: Commercial off-the-shelf
 
-  Commercially available off-the-shelf:
+  Commercial off-the-shelf:
     type: term
     description: |-
-      Commonly referred to as COTS, these are commercial items that are sold in large quantities and provided to the Government in exactly the same form as available commercially.
+      These are commercially available items — typically Software-as-a-Service — that are provided to the Government in exactly the same form as available commercially.
 
   CPAF:
     type: acronym
@@ -815,7 +833,7 @@ entries:
   Federal Acquisition Regulation:
     type: term
     description: |-
-      The overall governing Federal regulation related to acquisition of goods and services that applies to all federal agencies.
+      The regulation that governs the purchase of goods and services by all federal agencies.
 
   FARA:
     type: acronym
@@ -1052,6 +1070,15 @@ entries:
     description: |-
       The U.S. Government Accountability Office is known as "the investigative arm of Congress" and  "the congressional watchdog." GAO supports the Congress in meeting its constitutional responsibilities and helps improve the performance and accountability of the Federal Government for the benefit of the American people.
 
+  GMT:
+    type: acronym
+    term: General Management Team
+
+  General Management Team:
+    type: term
+    description: |-
+      The GMT's purpose is alignment and collaboration among the leadership layers of 18F. It is made up of members of the 18F Leadership Team, supervisors, and non-supervisory chapter delegates from Account Management and Acquisitions.
+
   General market conditions:
     type: term
     description: |-
@@ -1134,7 +1161,7 @@ entries:
   General Services Administration:
     type: term
     description: |-
-      The General Services Administration is an independent agency of the United States government, established in 1949 to help manage and support the basic functioning of federal agencies. The GSA supplies products and communications for U.S. government offices, provides transportation and office space to federal employees, and develops government-wide cost-minimizing policies, among other management tasks. Its stated mission is to help federal agencies better serve the public by offering, at best value, superior workplaces, expert solutions, acquisition services and management policies.
+      The General Services Administration is an independent agency of the United States government, established in 1949 to help manage and support the basic functioning of federal agencies. The GSA supplies products and communications for U.S. government offices, provides transportation and office space to federal employees, and develops government-wide cost-minimizing policies, among other management tasks. Its stated mission is to help federal agencies better serve the public by offering, at best value, superior workplaces, expert solutions, acquisition services and management policies. TTS is part of FAS, which is part of GSA.
 
   GSA Schedule and Federal Supply Schedule contracts: &a
     type: term
@@ -1180,10 +1207,6 @@ entries:
     description: |-
       A small business concern that appears on the List of Qualified HUBZone Small Business Concerns maintained by the Small Business Administration (13 CFR 126.103).
 
-  IA:
-    type: acronym
-    term: Interagency agreement
-
   IAA:
     type: acronym
     term: Interagency agreement
@@ -1227,6 +1250,10 @@ entries:
     type: term
     description: |-
       Used for sealed bidding, the IFB does not contain evaluation criteria. The offeror submits only a price as their proposal and the Government must select the lowest price if the price is considered fair and reasonable and the offeror meets responsibility qualifications. An invitation for bid is an invitation to contractors or equipment suppliers, through a bidding process, to submit a proposal on a specific project to be realized or product or service to be furnished. If not stated otherwise, the contractor or supplier with the lowest bid is awarded the contract, provided that they meet the minimum criteria for the bid. This is in contrast to a request for proposal (RFP), in which case other reasons (technology used, quality, past performance) might cause or allow choice of another offer.
+
+  IG:
+    type: acronym
+    term: Office of the Inspector General
 
   IGCE:
     type: acronym
@@ -1619,7 +1646,7 @@ entries:
 
   Office of the Inspector General:
     type: term
-    description: null
+    description: The oversight division within each federal agency, which verifies the agency is complying with laws.
 
   OMB:
     type: acronym
@@ -1803,17 +1830,17 @@ entries:
     type: term
     description: null
 
-  POP:
+  PoP:
     type: acronym
     term:
-      - Procurement Operating Procedure
       - Period of Performance
-
-  Procurement Operating Procedure:
-    type: term
-    description: null
+      - Procurement Operating Procedure
 
   Period of Performance:
+    type: term
+    description: The time window for an IAA.
+
+  Procurement Operating Procedure:
     type: term
     description: null
 
@@ -2464,9 +2491,13 @@ entries:
     description: A type of document published by the OMB that tells federal agencies how to make budget requests.
 
   a11y:
+    type: acronym
+    term: Accessibility
+
+  Accessibility:
     type: term
     description: |-
-      A numeronym that stands for "accessibility."
+      Accessibility means the greatest number of users, regardless of their abilities or disabilities, can view your content or use your services. And it is required by law for all federal information and communication technology (ICT) products to be accessible (with a few minor exceptions). The Web Content Accessibility Guidelines (WCAG) have long been the gold standard for accessibility on the web. Here at 18F we follow WCAG2.0 AA as our minimum standard for accessibility. The numeronym "a11y" is often used as shorthand for "accessibility".
 
   ACQ:
     type: acronym
@@ -2564,11 +2595,6 @@ entries:
     description: |-
       Automated software testing (CI) practiced along with automated deployment of frequent, small changes to software (CD).
 
-  Clients and Markets:
-    type: term
-    description: |-
-      Clients and Markets is a division within TTS that provides consulting services to government agencies. The TTS communications team is also part of the division. The following offices and teams are part of Clients and Markets: 18F, Centers of Excellence, Client Development, Outreach, and Presidential Innovation Fellows.
-
   CMS:
     type: acronym
     term:
@@ -2585,7 +2611,11 @@ entries:
     description: |-
       Agency within Health and Human Services (HHS). One of the Ms is "silent".
 
-  COE:
+  CoE:
+    type: acronym
+    term: Centers of Excellence
+
+  Centers of Excellence:
     type: term
     description: |-
       The Centers of Excellence accelerate the modernization of IT infrastructure across government by leveraging private sector innovation and existing government services, and by centralizing best practices and expertise. The CoEs are an office within TTS.
@@ -2770,14 +2800,22 @@ entries:
       HR Links is GSA's system for HR actions, including requesting leave and managing performance review documents.
 
   IaaS:
+    type: acronym
+    term: Infrastructure as a Service
+
+  Infrastructure as a Service:
     type: term
     description: |-
-      Infrastructure as a Service. A service that provides on-demand computing services such as storage. This is the foundation on which organizations can build and maintain cloud services.
+      A service that provides on-demand computing services such as storage. This is the foundation on which organizations can build and maintain cloud services.
 
   IaC:
+    type: acronym
+    term: Infrastructure as Code
+
+  Infrastructure as Code:
     type: term
     description: |-
-      Infrastructure as Code. A technique allowing a software engineer to write code that defines IT infrastructure, like, definitions of servers needed by a project. The code can be read by a machine that then provisions the needed server.
+      A technique allowing a software engineer to write code that defines IT infrastructure, like, definitions of servers needed by a project. The code can be read by a machine that then provisions the needed server.
 
   Integrity:
     type: term
@@ -3141,6 +3179,15 @@ entries:
     type: term
     description: |-
       The Technology Transformation Services aim to improve the public's experience with the government by helping agencies build, buy, and share technology that allows them to better serve the public. This is the TTS Handbook, and you may be reading it because you're an employee of TTS. TTS is part of FAS, which is part of GSA.
+
+  USDC:
+    type: acronym
+    term: United States Digital Corps
+
+  United States Digital Corps:
+    type: term
+    description: |-
+      The United States Digital Corps is a two‑year fellowship program for early‑career technologists; a part of TTS.
 
   USDS:
     type: acronym

@@ -12,9 +12,18 @@ Definitions may not be expansive but should give readers enough context to condu
 
 ## Contributing a definition
 
-Open an issue to either add an acronym or add a term. (Templates pending.)
+Either:
+- Open an issue to either add an acronym or add a term. (Templates pending.)
 
-Or, add the acronym / term to the glossary.yml file directly and open a pull request.
+Or:
+- Add the acronym / term to the glossary.yml file directly and open a pull request. 
+  - There is no need to edit the .md file directly.
+  - View validations below to see the required list of attributes. 
+
+## How the yaml file works
+- New acronyms will automatically be added to the table for acronyms and initialisms at the top of the human-readable version (.md file). 
+- Links from acronyms to terms are created automatically. 
+- Terms will be automatically alphabetized when generating the human-readable version.
 
 ## Contributing to the code
 
