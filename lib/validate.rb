@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'yaml'
-require './lib/common'
+require "yaml"
+require "./lib/common"
 
 # @todo Acronyms must reference a term
 # @todo Cross-references are set as arrays
@@ -14,9 +14,9 @@ class GlossaryValidator
 
   # @param path [String | nil] path to glossary file
   def initialize(path: nil)
-    @path = path || './glossary.yml'
+    @path = path || "./glossary.yml"
     @key = :entries
-    @data = symbolize_keys(YAML.load_file(@path))
+    @data = symbolize_keys(YAML.load_file(@path, aliases: true))
     # Minimally assert that the key is present
     # @todo: Make a better error message
     @data.fetch(@key)
@@ -78,9 +78,9 @@ class EntryValidator
     key = data.keys.first
     values = data.values.first
     case values[:type]
-    when 'term'
+    when "term"
       validate_term(data)
-    when 'acronym'
+    when "acronym"
       validate_acronym(data)
     else
       raise EntryTypeError, key
@@ -106,9 +106,9 @@ class EntryValidator
       key,
       values,
       %i[type
-         description
-         longform
-         cross_references]
+        description
+        longform
+        cross_references]
     )
     true
   end
@@ -137,7 +137,7 @@ class EntryValidator
     Array(values[:cross_references]).each do |crossref|
       crossref_entry = context.fetch(crossref.to_sym)
       case crossref_entry.fetch(:type)
-      when 'term'
+      when "term"
         # NO OP
       else
         raise CrossreferencesAcronymError.new(key, crossref, crossref_entry[:term])
@@ -161,11 +161,11 @@ class EntryValidator
 
   def validate_term_defined(key, values)
     case values[:term].class.to_s
-    when 'String'
+    when "String"
       check_term_defined(values[:term])
-    when 'Array'
+    when "Array"
       check_term_defined(values[:term])
-    when 'NilClass'
+    when "NilClass"
       raise MissingTermError, key
     else
       raise MissingTermError, key
@@ -189,9 +189,9 @@ class EntryValidator
       raise TermNotFoundError.new(key, term) unless context[term.to_sym]
 
       case context[term.to_sym][:type]
-      when 'acronym'
+      when "acronym"
         raise AcronymReferenceError.new(key, term)
-      when 'term'
+      when "term"
         # NO OP
       else
         raise EntryTypeError, term
@@ -237,7 +237,7 @@ class MissingTermError < StandardError
 
   def initialize(key)
     @key = key
-    @term = key.to_s.split('').map { |letter| "#{letter}____ " }.join
+    @term = key.to_s.chars.map { |letter| "#{letter}____ " }.join
     super(message)
   end
 
@@ -245,7 +245,7 @@ class MissingTermError < StandardError
     <<~ERR
 
 
-      The acronym \"#{key}\" doesn't define a related term!
+      The acronym "#{key}" doesn't define a related term!
 
       How can a reader know what your acronym means?
 
@@ -279,17 +279,17 @@ class TermNotFoundError < StandardError
   end
 
   def message
-    noun = crossref ? 'term' : 'acronym'
-    verbs = crossref ? 'cross-references' : 'defines'
+    noun = crossref ? "term" : "acronym"
+    verbs = crossref ? "cross-references" : "defines"
     <<~ERR
 
 
-      The #{noun} \"#{key}\" #{verbs} the term \"#{missing_term}\",
+      The #{noun} "#{key}" #{verbs} the term "#{missing_term}",
       but I cannot find that term anywhere in the glossary.
 
       How can I know what term to link to?
 
-      Add an entry for \"#{missing_term}\", like:
+      Add an entry for "#{missing_term}", like:
 
           #{missing_term}:
             type: term
@@ -317,12 +317,12 @@ class CrossreferencesAcronymError < StandardError
     <<~ERR
 
 
-      The term \"#{key}\" cross-references the acronym
-      \"#{crossref}\". Terms should cross-reference other
+      The term "#{key}" cross-references the acronym
+      "#{crossref}". Terms should cross-reference other
       terms instead of acronyms.
 
-      Should \"#{key}\" refer to \"#{crossref_term}\" instead
-      of \"#{crossref}\"?
+      Should "#{key}" refer to "#{crossref_term}" instead
+      of "#{crossref}"?
     ERR
   end
 end
@@ -340,7 +340,7 @@ class TermMissingDescriptionError < StandardError
     <<~ERR
 
 
-      The term \"#{key}\" does not have a description.
+      The term "#{key}" does not have a description.
 
       How can a reader know what this term means?
 
@@ -376,9 +376,9 @@ class BadSchemaError < StandardError
     <<~ERR
 
 
-      Your entry \"#{key}\" defines the following attributes (a.k.a. "keys"):
+      Your entry "#{key}" defines the following attributes (a.k.a. "keys"):
 
-        #{extra_keys.join(', ')}
+        #{extra_keys.join(", ")}
 
       These attributes aren't needed. Please delete them!
     ERR
@@ -399,11 +399,11 @@ class AcronymReferenceError < StandardError
     <<~ERR
 
 
-      Your acronym "#{key}" refers to another acronym: \"#{points_to}\".
+      Your acronym "#{key}" refers to another acronym: "#{points_to}".
 
       That doesn't make sense to me!
 
-      Please link your acronym to an entry that has a type of \"term\". Like this:
+      Please link your acronym to an entry that has a type of "term". Like this:
 
       #{key}:
         type: acronym
@@ -431,13 +431,13 @@ class EntryTypeError < StandardError
     # If it's all uppercase and shorter than 10 characters,
     # it's probably an acronym
     if (key_str <=> key_str.upcase).zero? && key_str.length < 10
-      'acronym'
+      "acronym"
     else
-      'term'
+      "term"
     end
-  rescue StandardError
+  rescue
     # Ignore all errors and default to "term" if there's an issue.
-    'term'
+    "term"
   end
 
   def message

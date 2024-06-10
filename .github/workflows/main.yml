@@ -24,17 +24,17 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
+
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7.3
+          ruby-version: 3.3
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
       - name: Run linting and unit tests
         run: |
           gem install bundler
           bundle install --jobs 4 --retry 3
-          bundle exec rubocop -c .rubocop.yml
+          bundle exec standardrb
           bundle exec rake test
 
       - name: Validate the glossary
