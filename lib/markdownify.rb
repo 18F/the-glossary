@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 # Thanks https://avdi.codes/recursively-symbolize-keys/
-require 'yaml'
-require './lib/common'
-require './lib/validate'
+require "yaml"
+require "./lib/common"
+require "./lib/validate"
 
 # Turn a validated glossary into a linked Markdown file
 class Markdownify
@@ -12,23 +12,23 @@ class Markdownify
   attr_reader :data, :path, :output
 
   def initialize(path = nil, outpath = nil)
-    @path = path || './glossary.yml'
-    @output = outpath || './glossary.md'
+    @path = path || "./glossary.yml"
+    @output = outpath || "./glossary.md"
     @data = sort_data(
       symbolize_keys(
-        YAML.load_file(@path)
+        YAML.load_file(@path, aliases: true)
       )
     )
   end
 
   def perform
-    File.open(output, 'w') { |file| file << _perform }
+    File.open(output, "w") { |file| file << _perform }
     puts "\nSuccess! Check out your file at #{output}"
   end
 
   def _perform
     before_perform
-    str = ''
+    str = ""
     str += "### Acronyms & Initialisms\n\n"
     str += acronym_content
     str += "\n\n"
@@ -38,11 +38,11 @@ class Markdownify
   end
 
   def acronym_content
-    str = ''
+    str = ""
     str += "| | |\n|-|-|\n" # table header
     build_tags_by_letter.sort.map do |letter, tags|
       str += "| #{letter} | "
-      str += "#{tags.join(' &bull; ')} |"
+      str += "#{tags.join(" &bull; ")} |"
       str += "\n"
     end
     str
@@ -54,13 +54,13 @@ class Markdownify
       tag = tag_for_acronym(key, values)
       next if tag.nil?
 
-      results[key.to_s.chars.first.upcase] << tag
+      results[key.to_s[0].upcase] << tag
     end
     results
   end
 
   def tag_for_acronym(key, values)
-    case Array(values[:term]).count
+    case Array(values[:term]).size
     when 0
       nil
     when 1
@@ -79,7 +79,7 @@ class Markdownify
   def tag_for_multiple_terms(key, values)
     term_links = values[:term].map.with_index do |term, i|
       "[(#{i + 1})](#{goto term})"
-    end.join(' ')
+    end.join(" ")
     <<~TAG
       <a name="acronym-#{key}"></a>#{key} #{term_links}
     TAG
@@ -92,7 +92,7 @@ class Markdownify
   end
 
   def build_definition(key, values)
-    str = ''
+    str = ""
     str += "**#{anchor(key)}#{self_link(key)}**"
     str += (acronym?(key) ? " (#{acronym_for(key).first}) \\\n" : " \\\n")
     str += description_content(values)
@@ -117,7 +117,7 @@ class Markdownify
   def overloaded_acronym?(key)
     if acronym?(key)
       _, values = acronym_for(key)
-      Array(values[:term]).count > 1
+      Array(values[:term]).size > 1
     else
       false
     end
@@ -178,7 +178,7 @@ class Markdownify
   end
 
   def slug(key)
-    key.to_s.downcase.gsub(/\s+/, '-')
+    key.to_s.downcase.gsub(/\s+/, "-")
   end
 
   private
@@ -193,12 +193,12 @@ class Markdownify
     data[:entries].each do |entry|
       key, values = entry
       case values[:type]
-      when 'acronym'
+      when "acronym"
         acronyms[key] = values
-      when 'term'
+      when "term"
         terms[key] = values
       end
     end
-    { acronyms: acronyms, terms: terms }
+    {acronyms: acronyms, terms: terms}
   end
 end
