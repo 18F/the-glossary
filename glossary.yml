@@ -1400,6 +1400,15 @@ entries:
     type: term
     description: null
 
+  LRM:
+    type: acronym
+    term: Legislative referral memoranda
+
+  Legislative referral memoranda:
+    type: term
+    description: |-
+      These come to us from OMB for review. It can be the text of a potential bill or a report that is going to Congress.
+      
   MAC:
     type: acronym
     term: Multi-agency contract
