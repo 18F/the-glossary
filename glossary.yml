@@ -287,6 +287,15 @@ entries:
     description: |-
       A written order, signed by the contracting officer, directing the contractor to make a change that the Changes clause authorizes the contracting officer to order without the contractor's consent.
 
+  CHCO:
+    type: acronym
+    term: Chief Human Capital Officer
+
+  Chief Human Capital Officer:
+    type: term
+    description: |-
+      [Definition here](https://www.gsa.gov/about-us/organization/leadership-directory/chief-human-capital-officer)
+
   CI:
     type: acronym
     term: Commercial item
@@ -1822,6 +1831,15 @@ entries:
     description: |-
       A quality oriented method of monitoring and measuring contractor performance against functional and/or performance requirements of the work statement.
 
+  PKI:
+    type: acronym
+    term: Public Key Infrastructure
+
+  Public Key Infrastructure:
+    type: term
+    description: |-
+      Public Key Infrastructure is a framework established to issue, maintain, and revoke public key certificates, including systems, processes and people. Public key certificates provide digital signature and encryption capabilities.
+
   PNM:
     type: acronym
     term: Price negotiation memorandum
@@ -3098,6 +3116,14 @@ entries:
     description: |-
       Individuals or agencies subscribe to an application, and then access it over the internet. Most online applications, such as Salesforce and Google Drive, fall into this category. Need to purchase a SaaS product? Here's how to get software.
 
+  SBAR:
+    type: acronym
+    term: Situation, Background, Assessment, and Recommendation/Request
+
+  Situation, Background, Assessment, and Recommendation/Request:
+      type: term
+      description: A communication framework that allows teams to share critical information about a given topic.
+
   Scrum master:
     type: term
     description: |-
@@ -3170,6 +3196,15 @@ entries:
   System Security Plan:
       type: term
       description: null
+
+  TLC:
+    type: acronym
+    term: Tender Loving Care
+
+  Tender Loving Care:
+    type: term
+    description: |-
+      The TLC crew is a team within 18F made up of available staff who are between projects with partners. [TLC Crew Github](https://github.com/18F/TLC-crew/)
 
   TK:
     type: acronym
