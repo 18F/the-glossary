@@ -4,4 +4,4 @@ ruby "~> 3"
 
 gem "minitest-reporters"
 gem "rake"
-gem "standard"
+gem "standard", ">= 1.37.0"
