@@ -1251,6 +1251,15 @@ entries:
     description: |-
       A type of contract that provides for an indefinite quantity of supplies or services during a fixed period of time. The legal origin of IDIQ contracts comes from the Federal Acquisition Regulation  (FAR), section 16.501(a).
 
+  IDT:
+    type: acronym
+    term: Digital Infrastructure Technologies
+
+  Digital Infrastructure Technologies:
+    type: term
+    description: |-
+      Digital Infrastructure Technologies operates GSA's information technology infrastructure, software, and systems. Its support areas include IT help and on-site support, customized IT projects, hardware management, mobile device management, telework, network operations, voice over IP, VPN and remote access, virtual meeting software, IT continuity of operations, and IT records management.
+
   IFB:
     type: acronym
     term: Invitation for bid
